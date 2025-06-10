@@ -70,14 +70,41 @@
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-xl bg-white/80 dark:bg-black/80 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-xl bg-white/80 dark:bg-gray-900/80 border border-white/20 dark:border-gray-700/50;
   }
 
   .elegant-gradient {
-    @apply bg-gradient-to-br from-coffee-100 via-coffee-50 to-gold-100 dark:from-black dark:via-coffee-999 dark:to-black;
+    @apply bg-gradient-to-br from-coffee-100 via-coffee-50 to-gold-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900;
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-coffee-800 to-gold-600 dark:from-coffee-200 dark:to-gold-300 bg-clip-text text-transparent;
+  }
+
+  .section-card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg;
+  }
+
+  .info-box {
+    @apply bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4;
+  }
+
+  .step-number {
+    @apply bg-coffee-600 dark:bg-coffee-400 text-white dark:text-gray-900;
+  }
+
+  .process-card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+
+  .mobile-stack {
+    @apply flex-col space-y-4 space-x-0;
   }
 }

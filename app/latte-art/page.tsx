@@ -1,93 +1,47 @@
-import Image from "next/image";
-import { Palette, Droplets, Heart, Star } from "lucide-react";
-import { PageHeader } from "@/components/page-header";
-import { MethodSteps } from "@/components/method-steps";
-import { InfoCard } from "@/components/info-card";
+import Image from "next/image"
+import { Droplet, Sparkles, Zap, Flame } from "lucide-react"
+import { PageHeader } from "@/components/page-header"
+import { InfoCard } from "@/components/info-card"
 
 export default function LatteArtPage() {
-  const latteArtSteps = [
-    {
-      title: "Preparação do Espresso",
-      description:
-        "Extraia um espresso perfeito com crema dourada e consistente. A qualidade do espresso é fundamental para a latte art.",
-      tip: "Use uma xícara com boca larga (6-8cm) para facilitar os desenhos.",
-    },
-    {
-      title: "Vaporização do Leite",
-      description:
-        "Vaporize 150ml de leite gelado até 65°C, criando microespuma sedosa com textura de 'tinta'.",
-      tip: "O leite deve ter brilho de seda e consistência cremosa, sem bolhas grandes.",
-    },
-    {
-      title: "Integração da Espuma",
-      description:
-        "Bata levemente a jarra no balcão e gire para integrar a espuma com o leite.",
-      tip: "A espuma deve estar completamente integrada, sem separação visível.",
-    },
-    {
-      title: "Posicionamento Inicial",
-      description:
-        "Comece despejando de altura (5-10cm) no centro da xícara para penetrar a crema.",
-      tip: "Fluxo fino e constante no início para não quebrar a crema do espresso.",
-    },
-    {
-      title: "Criação da Base",
-      description:
-        "Quando a xícara estiver meio cheia, aproxime a jarra da superfície e aumente o fluxo.",
-      tip: "A proximidade da jarra com a superfície é crucial para a formação dos desenhos.",
-    },
-    {
-      title: "Finalização do Desenho",
-      description:
-        "Execute o movimento específico do desenho escolhido e finalize com um movimento rápido através do centro.",
-      tip: "Pratique os movimentos sem leite primeiro para desenvolver a coordenação.",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <PageHeader
         title="Latte Art"
-        description="Domine a arte de criar desenhos no leite, transformando cada café em uma obra de arte."
-        icon={<Palette className="h-8 w-8 text-[#C38154]" />}
+        description="Domine a arte de desenhar no café: técnicas, padrões e segredos para criar designs perfeitos."
+        icon={<Droplet className="h-8 w-8 text-[#C38154]" />}
       />
 
       <section className="py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-[#884A39] dark:text-white mb-6">
-                Arte na Xícara
-              </h2>
-              <div className="space-y-4 text-[#884A39] dark:text-white dark:text-white">
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-6">A Arte no Café</h2>
+              <div className="space-y-4 text-[#884A39]/80 dark:text-amber-100/90">
                 <p>
-                  Latte art é a técnica de criar desenhos na superfície de
-                  bebidas à base de espresso usando leite vaporizado. Mais que
-                  decoração, é uma demonstração de habilidade técnica que indica
-                  a qualidade do espresso e da vaporização do leite.
+                  Latte Art é a técnica de criar desenhos na superfície de bebidas à base de espresso utilizando leite
+                  vaporizado. Mais que uma simples decoração, é a expressão visual da habilidade do barista e um
+                  indicador da qualidade da bebida.
                 </p>
                 <p>
-                  A latte art requer três elementos fundamentais: espresso com
-                  crema consistente, leite perfeitamente vaporizado com
-                  microespuma sedosa, e técnica de despejo precisa. A combinação
-                  desses elementos permite criar desde desenhos simples até
-                  obras complexas.
+                  A técnica surgiu na Itália, mas foi em Seattle, nos anos 1980-90, que ganhou popularidade mundial.
+                  Hoje, é parte fundamental da cultura de café especial, com campeonatos dedicados exclusivamente a esta
+                  arte.
                 </p>
                 <p>
-                  Além da beleza visual, a latte art indica que o barista domina
-                  as técnicas fundamentais do café especial, garantindo que a
-                  bebida não apenas pareça boa, mas também tenha sabor
-                  excepcional.
+                  Dominar o latte art requer prática constante, compreensão da textura ideal do leite e controle preciso
+                  de movimento. Os padrões básicos incluem o coração, a roseta e a tulipa, mas as possibilidades são
+                  infinitas para baristas criativos.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-40" />
+              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-amber-900/30 rounded-full blur-3xl opacity-40" />
               <Image
                 src="/placeholder.svg?height=400&width=500"
                 width={500}
                 height={400}
-                alt="Latte art sendo criada"
+                alt="Latte Art"
                 className="rounded-2xl shadow-lg"
               />
             </div>
@@ -95,294 +49,278 @@ export default function LatteArtPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <InfoCard
+              title="Textura do Leite"
+              description="Microespuma cremosa com bolhas imperceptíveis, consistência de tinta."
+              icon={<Droplet className="h-6 w-6 text-[#C38154]" />}
+            />
+            <InfoCard
               title="Espresso"
-              description="Base com crema dourada e consistente, extraída em 25-30 segundos."
-              icon={<span className="text-2xl">☕</span>}
+              description="Crema consistente e dourada para contraste visual perfeito."
+              icon={<Flame className="h-6 w-6 text-[#C38154]" />}
             />
             <InfoCard
-              title="Leite"
-              description="Vaporizado a 65°C com microespuma sedosa e brilhante."
-              icon={<Droplets className="h-6 w-6 text-[#C38154]" />}
+              title="Altura de Despejo"
+              description="Varia conforme a fase: alta para misturar, baixa para desenhar."
+              icon={<Zap className="h-6 w-6 text-[#C38154]" />}
             />
             <InfoCard
-              title="Técnica"
-              description="Controle de fluxo, altura e movimento da jarra para criar desenhos."
-              icon={<Palette className="h-6 w-6 text-[#C38154]" />}
-            />
-            <InfoCard
-              title="Prática"
-              description="Repetição constante para desenvolver coordenação e precisão."
-              icon={<Star className="h-6 w-6 text-[#C38154]" />}
+              title="Velocidade"
+              description="Fluxo constante e movimento preciso para definição dos padrões."
+              icon={<Sparkles className="h-6 w-6 text-[#C38154]" />}
             />
           </div>
 
-          <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-white mb-8">
-              Técnica Fundamental
-            </h3>
-            <MethodSteps steps={latteArtSteps} />
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-8">Técnica Fundamental</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">1. Preparação do Espresso</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Extraia um espresso de qualidade com crema consistente e dourada. A crema é a "tela" onde o desenho
+                    será formado, por isso deve ter boa consistência e cor.
+                  </p>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">2. Vaporização do Leite</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Posicione o vaporizador ligeiramente abaixo da superfície para criar o vórtice adequado. O objetivo
+                    é incorporar ar nos primeiros segundos e depois homogeneizar a temperatura.
+                  </p>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">3. Textura Ideal</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    O leite deve ter consistência de "tinta" - cremoso, brilhante e sem bolhas visíveis. A temperatura
+                    ideal é entre 60-65°C para preservar a doçura natural.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">4. Técnica de Despejo</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Comece despejando de altura maior (5-7cm) para misturar leite e espresso. Gradualmente, aproxime o
+                    bico do jarro à superfície para iniciar o desenho.
+                  </p>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">5. Controle de Fluxo</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Mantenha um fluxo constante e controlado. A velocidade do despejo e o movimento da mão determinam a
+                    definição do desenho.
+                  </p>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">6. Finalização</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Para finalizar o desenho, corte através do padrão com um movimento rápido e preciso, criando
+                    contraste e definição.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Coração (Heart)
-              </h3>
-              <div className="text-center mb-4">
-                <div className="w-20 h-20 bg-[#F9E0BB] rounded-full mx-auto flex items-center justify-center">
-                  <Heart className="h-10 w-10 text-[#C38154]" />
-                </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Coração</h3>
+              <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=300&width=300"
+                  fill
+                  alt="Latte Art - Coração"
+                  className="object-cover"
+                />
               </div>
               <div className="space-y-3">
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  O desenho mais básico e fundamental. Base para todos os outros
-                  padrões.
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  O padrão mais básico e ponto de partida para iniciantes. Requer:
                 </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Técnica:
-                  </h4>
-                  <ol className="list-decimal pl-4 text-sm text-[#884A39] dark:text-white dark:text-white">
-                    <li>Despeje de altura no centro</li>
-                    <li>Quando meio cheio, aproxime a jarra</li>
-                    <li>Crie um círculo branco</li>
-                    <li>Corte através do centro rapidamente</li>
-                  </ol>
+                <ol className="list-decimal pl-4 space-y-1 text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  <li>Despeje o leite no centro da xícara</li>
+                  <li>Mantenha o fluxo constante</li>
+                  <li>Quando a xícara estiver quase cheia, levante ligeiramente o jarro</li>
+                  <li>Corte através do desenho com movimento rápido</li>
+                </ol>
+                <div className="p-2 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded text-xs text-[#884A39]/80 dark:text-amber-100/80">
+                  <strong>Dica:</strong> Pratique o movimento de corte final, que define a forma do coração.
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Roseta (Rosetta)
-              </h3>
-              <div className="text-center mb-4">
-                <div className="w-20 h-20 bg-[#F9E0BB] rounded-full mx-auto flex items-center justify-center">
-                  <span className="text-3xl">🌹</span>
-                </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Roseta</h3>
+              <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=300&width=300"
+                  fill
+                  alt="Latte Art - Roseta"
+                  className="object-cover"
+                />
               </div>
               <div className="space-y-3">
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Desenho em forma de folha com múltiplas camadas. Requer
-                  movimento lateral da jarra.
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Padrão intermediário que cria uma forma semelhante a uma folha ou samambaia:
                 </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Técnica:
-                  </h4>
-                  <ol className="list-decimal pl-4 text-sm text-[#884A39] dark:text-white dark:text-white">
-                    <li>Comece como o coração</li>
-                    <li>Mova a jarra lado a lado</li>
-                    <li>Diminua a amplitude gradualmente</li>
-                    <li>Finalize cortando para frente</li>
-                  </ol>
+                <ol className="list-decimal pl-4 space-y-1 text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  <li>Comece despejando no centro</li>
+                  <li>Quando a base branca se formar, aproxime o jarro à superfície</li>
+                  <li>Inicie um movimento lateral de "vai-e-vem"</li>
+                  <li>Avance lentamente em direção oposta ao barista</li>
+                  <li>Finalize com um corte reto pelo centro</li>
+                </ol>
+                <div className="p-2 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded text-xs text-[#884A39]/80 dark:text-amber-100/80">
+                  <strong>Dica:</strong> O ritmo do movimento lateral deve ser constante e suave.
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Tulipa (Tulip)
-              </h3>
-              <div className="text-center mb-4">
-                <div className="w-20 h-20 bg-[#F9E0BB] rounded-full mx-auto flex items-center justify-center">
-                  <span className="text-3xl">🌷</span>
-                </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Tulipa</h3>
+              <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=300&width=300"
+                  fill
+                  alt="Latte Art - Tulipa"
+                  className="object-cover"
+                />
               </div>
               <div className="space-y-3">
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Múltiplos corações empilhados. Requer controle preciso do
-                  fluxo e timing.
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Padrão avançado que combina elementos do coração em camadas:
                 </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Técnica:
-                  </h4>
-                  <ol className="list-decimal pl-4 text-sm text-[#884A39] dark:text-white dark:text-white">
-                    <li>Crie o primeiro coração</li>
-                    <li>Pare o fluxo e mova para trás</li>
-                    <li>Repita 2-3 vezes</li>
-                    <li>Corte através de todos os corações</li>
-                  </ol>
+                <ol className="list-decimal pl-4 space-y-1 text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  <li>Despeje uma pequena base branca no centro</li>
+                  <li>Puxe o jarro para trás criando um pequeno coração</li>
+                  <li>Repita o processo 3-4 vezes, cada vez ligeiramente acima</li>
+                  <li>Finalize com um corte suave pelo centro</li>
+                </ol>
+                <div className="p-2 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded text-xs text-[#884A39]/80 dark:text-amber-100/80">
+                  <strong>Dica:</strong> O timing entre cada camada é crucial para definição do desenho.
                 </div>
               </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3
-                className="text-xl font-bold text-[#884A39] dark:text-white mb-4"
-                id="vaporizacao"
-              >
-                Vaporização Perfeita
-              </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Vaporização Perfeita</h3>
               <div className="space-y-4">
-                <div className="p-4 bg-[#F9E0BB]/30 rounded-lg">
-                  <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                    Temperatura do Leite
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Use leite gelado (3-5°C) em jarra metálica. Leite integral
-                    produz melhor textura devido ao teor de gordura.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Posicionamento</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Insira o vaporizador ligeiramente deslocado do centro, em ângulo que crie vórtice.
                   </p>
                 </div>
-
-                <div className="p-4 bg-[#F9E0BB]/30 rounded-lg">
-                  <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                    Fase de Incorporação (0-5 segundos)
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Vaporizador logo abaixo da superfície. Som de "papel
-                    rasgando" indica incorporação correta de ar.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Fase de Aeração</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Nos primeiros 3-5 segundos, mantenha o vaporizador próximo à superfície para incorporar ar.
                   </p>
                 </div>
-
-                <div className="p-4 bg-[#F9E0BB]/30 rounded-lg">
-                  <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                    Fase de Aquecimento (5-20 segundos)
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Submerja o vaporizador mais fundo. Crie movimento circular
-                    para homogeneizar a temperatura.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Fase de Texturização</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Submerja o vaporizador para homogeneizar a temperatura e refinar a textura.
                   </p>
                 </div>
-
-                <div className="p-4 bg-[#F9E0BB]/30 rounded-lg">
-                  <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                    Temperatura Final
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    65°C é ideal. A jarra deve estar quente mas ainda
-                    confortável para segurar (3-5 segundos).
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Temperatura</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    60-65°C é ideal. Acima disso, as proteínas desnaturadas afetam sabor e textura.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Erros Comuns
-              </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Erros Comuns</h3>
               <div className="space-y-4">
-                <div className="p-3 bg-red-50 border-l-4 border-red-400 rounded">
-                  <h4 className="font-medium text-red-800">Bolhas Grandes</h4>
-                  <p className="text-sm text-red-700">
-                    Vaporizador muito próximo da superfície ou movimento
-                    excessivo. Mantenha posição estável.
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Leite Superaquecido</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Resulta em sabor queimado e textura granulada. Use termômetro até ganhar sensibilidade.
                   </p>
                 </div>
-
-                <div className="p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
-                  <h4 className="font-medium text-yellow-800">
-                    Leite Muito Quente
-                  </h4>
-                  <p className="text-sm text-yellow-700">
-                    Acima de 70°C destrói proteínas e cria sabor queimado. Use
-                    termô metro ou pratique o toque.
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Bolhas Grandes</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Causadas por aeração excessiva ou incorreta. Bata levemente o jarro na bancada para eliminá-las.
                   </p>
                 </div>
-
-                <div className="p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
-                  <h4 className="font-medium text-blue-800">Espuma Separada</h4>
-                  <p className="text-sm text-blue-700">
-                    Falta de integração. Bata a jarra e gire o leite antes de
-                    despejar.
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Despejo Muito Alto</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Impede a formação de desenhos definidos. Aproxime mais o jarro da superfície.
                   </p>
                 </div>
-
-                <div className="p-3 bg-purple-50 border-l-4 border-purple-400 rounded">
-                  <h4 className="font-medium text-purple-800">
-                    Desenho Não Forma
-                  </h4>
-                  <p className="text-sm text-purple-700">
-                    Jarra muito alta ou fluxo inadequado. Aproxime da superfície
-                    e controle o fluxo.
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Movimento Brusco</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Causa distorções no desenho. Pratique movimentos suaves e controlados.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-md">
-            <h3
-              className="text-2xl font-bold text-[#884A39] dark:text-white mb-8"
-              id="desenhos"
-            >
-              Desenhos Avançados
-            </h3>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-2xl">🦢</span>
-                </div>
-                <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                  Cisne
-                </h4>
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Combinação de roseta com pescoço alongado. Requer movimento
-                  preciso da jarra.
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-6">Desenhos Avançados</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="p-4 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded-lg">
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Cisne</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80 mb-3">
+                  Combinação de roseta com manipulação do pescoço e cabeça usando um palito.
                 </p>
+                <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=150&width=250"
+                    fill
+                    alt="Latte Art - Cisne"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-2xl">🌊</span>
-                </div>
-                <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                  Ondas
-                </h4>
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Movimento contínuo lado a lado criando padrão ondulado. Base
-                  para muitos designs.
+              <div className="p-4 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded-lg">
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Roseta Múltipla</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80 mb-3">
+                  Várias rosetas pequenas dispostas em círculo, exigindo controle extremo.
                 </p>
+                <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=150&width=250"
+                    fill
+                    alt="Latte Art - Roseta Múltipla"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-2xl">🌸</span>
-                </div>
-                <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                  Flor
-                </h4>
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Múltiplas camadas de pétalas. Combina técnicas de tulipa e
-                  roseta.
+              <div className="p-4 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded-lg">
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Etching</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80 mb-3">
+                  Técnica que usa palitos para desenhar na superfície após o despejo básico.
                 </p>
-              </div>
-
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-2xl">🦋</span>
+                <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=150&width=250"
+                    fill
+                    alt="Latte Art - Etching"
+                    className="object-cover"
+                  />
                 </div>
-                <h4 className="font-medium text-[#884A39] dark:text-white mb-2">
-                  Borboleta
-                </h4>
-                <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                  Design simétrico com asas. Requer controle bilateral da jarra.
-                </p>
               </div>
-            </div>
-
-            <div className="mt-8 p-6 bg-[#F9E0BB]/20 rounded-lg">
-              <h4 className="font-medium text-[#884A39] dark:text-white mb-3">
-                Dicas para Progressão:
-              </h4>
-              <ul className="list-disc pl-5 space-y-2 text-sm text-[#884A39] dark:text-white dark:text-white">
-                <li>Domine o coração antes de tentar outros desenhos</li>
-                <li>
-                  Pratique movimentos sem leite para desenvolver coordenação
-                </li>
-                <li>Use água com detergente para praticar sem desperdício</li>
-                <li>Filme seus movimentos para analisar e melhorar</li>
-                <li>Mantenha consistência na vaporização do leite</li>
-                <li>Pratique diariamente, mesmo que por poucos minutos</li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

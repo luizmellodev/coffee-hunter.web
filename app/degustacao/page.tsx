@@ -1,440 +1,284 @@
-import Image from "next/image";
-import {
-  SnailIcon as Nose,
-  Eye,
-  LanguagesIcon as Tongue,
-  Brain,
-} from "lucide-react";
-import { PageHeader } from "@/components/page-header";
-import { InfoCard } from "@/components/info-card";
+import Image from "next/image"
+import { Sparkles, Flame, Leaf } from "lucide-react"
+import { PageHeader } from "@/components/page-header"
 
 export default function DegustacaoPage() {
   return (
     <div className="min-h-screen">
       <PageHeader
-        title="Degustação de Café"
-        description="Desenvolva seu paladar e aprenda a identificar as nuances sensoriais complexas dos cafés especiais."
-        icon={<Nose className="h-8 w-8 text-[#C38154]" />}
+        title="Degustação"
+        description="Aprenda a identificar aromas, sabores e texturas do café como um profissional."
+        icon={<Sparkles className="h-8 w-8 text-[#C38154]" />}
       />
 
       <section className="py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-[#884A39] dark:text-white mb-6">
-                A Arte da Análise Sensorial
-              </h2>
-              <div className="space-y-4 text-[#884A39] dark:text-white dark:text-white">
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-6">A Arte da Percepção</h2>
+              <div className="space-y-4 text-[#884A39]/80 dark:text-amber-100/90">
                 <p>
-                  A degustação de café é uma habilidade que pode ser
-                  desenvolvida por qualquer pessoa. Através da análise sensorial
-                  sistemática, podemos identificar e apreciar as centenas de
-                  compostos aromáticos e saborosos presentes no café especial.
+                  A degustação profissional de café, também conhecida como "cupping", é uma prática sistemática para
+                  avaliar as características sensoriais do café. É através dela que produtores, compradores e baristas
+                  identificam qualidades e defeitos.
                 </p>
                 <p>
-                  O processo envolve todos os sentidos: visão para avaliar cor e
-                  aparência, olfato para captar aromas, paladar para identificar
-                  sabores, e até mesmo audição e tato para avaliar corpo e
-                  textura. Cada sentido contribui para a experiência completa.
+                  Diferente do consumo casual, a degustação técnica envolve metodologia específica, vocabulário
+                  padronizado e treinamento sensorial contínuo. O objetivo é criar uma linguagem comum que permita
+                  comunicar com precisão as nuances de cada café.
                 </p>
                 <p>
-                  Desenvolver habilidades de degustação não apenas aumenta o
-                  prazer de beber café, mas também ajuda a identificar
-                  qualidade, origem e métodos de processamento, tornando cada
-                  xícara uma experiência educativa.
+                  Desenvolver habilidades de degustação não apenas enriquece a experiência pessoal com o café, mas
+                  também permite identificar cafés de qualidade superior e compreender como diferentes variáveis de
+                  produção e preparo afetam o resultado final.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-40" />
+              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-amber-900/30 rounded-full blur-3xl opacity-40" />
               <Image
                 src="/placeholder.svg?height=400&width=500"
                 width={500}
                 height={400}
-                alt="Degustação profissional de café"
+                alt="Degustação de café"
                 className="rounded-2xl shadow-lg"
               />
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <InfoCard
-              title="Aroma"
-              description="Primeira impressão através do olfato, revelando compostos voláteis complexos."
-              icon={<Nose className="h-6 w-6 text-[#C38154]" />}
-            />
-            <InfoCard
-              title="Aparência"
-              description="Avaliação visual da cor, clareza e presença de óleos ou sedimentos."
-              icon={<Eye className="h-6 w-6 text-[#C38154]" />}
-            />
-            <InfoCard
-              title="Sabor"
-              description="Percepção gustativa dos cinco sabores básicos e suas interações."
-              icon={<Tongue className="h-6 w-6 text-[#C38154]" />}
-            />
-            <InfoCard
-              title="Memória"
-              description="Desenvolvimento de biblioteca sensorial para comparações futuras."
-              icon={<Brain className="h-6 w-6 text-[#C38154]" />}
-            />
-          </div>
-
-          <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-white mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-8">
               Os Cinco Sentidos na Degustação
             </h3>
-
-            <div className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="border-l-4 border-purple-500 pl-6">
-                  <h4 className="text-xl font-bold text-purple-800 mb-4">
-                    👁️ Visão
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-purple-50 rounded">
-                      <h5 className="font-medium text-purple-800">Cor</h5>
-                      <p className="text-sm text-purple-700">
-                        Varia de dourado claro a marrom escuro, indicando torra
-                        e concentração.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-purple-50 rounded">
-                      <h5 className="font-medium text-purple-800">Clareza</h5>
-                      <p className="text-sm text-purple-700">
-                        Transparência indica método de filtração e presença de
-                        sedimentos.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-purple-50 rounded">
-                      <h5 className="font-medium text-purple-800">
-                        Crema (Espresso)
-                      </h5>
-                      <p className="text-sm text-purple-700">
-                        Cor, espessura e persistência indicam qualidade da
-                        extração.
-                      </p>
-                    </div>
-                  </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+              <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg text-center">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-full w-fit mx-auto mb-3">
+                  <span className="text-2xl">👁️</span>
                 </div>
-
-                <div className="border-l-4 border-blue-500 pl-6">
-                  <h4 className="text-xl font-bold text-blue-800 mb-4">
-                    👃 Olfato
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-blue-50 rounded">
-                      <h5 className="font-medium text-blue-800">Aroma Seco</h5>
-                      <p className="text-sm text-blue-700">
-                        Cheiro do café moído antes da adição de água.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-blue-50 rounded">
-                      <h5 className="font-medium text-blue-800">Aroma Úmido</h5>
-                      <p className="text-sm text-blue-700">
-                        Liberado quando a água quente entra em contato com o
-                        café.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-blue-50 rounded">
-                      <h5 className="font-medium text-blue-800">
-                        Retro-olfato
-                      </h5>
-                      <p className="text-sm text-blue-700">
-                        Aromas percebidos através da cavidade nasal durante a
-                        degustação.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Visão</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Cor, transparência, uniformidade da moagem, presença de defeitos visíveis.
+                </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="border-l-4 border-red-500 pl-6">
-                  <h4 className="text-xl font-bold text-red-800 mb-4">
-                    👅 Paladar
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-red-50 rounded">
-                      <h5 className="font-medium text-red-800">Doce</h5>
-                      <p className="text-sm text-red-700">
-                        Açúcares naturais desenvolvidos durante crescimento e
-                        torra.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-red-50 rounded">
-                      <h5 className="font-medium text-red-800">Ácido</h5>
-                      <p className="text-sm text-red-700">
-                        Acidez brilhante que adiciona vivacidade e complexidade.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-red-50 rounded">
-                      <h5 className="font-medium text-red-800">Amargo</h5>
-                      <p className="text-sm text-red-700">
-                        Cafeína e compostos da torra que adicionam estrutura.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-red-50 rounded">
-                      <h5 className="font-medium text-red-800">
-                        Salgado/Umami
-                      </h5>
-                      <p className="text-sm text-red-700">
-                        Minerais do solo e processamento que adicionam
-                        complexidade.
-                      </p>
-                    </div>
-                  </div>
+              <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg text-center">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-full w-fit mx-auto mb-3">
+                  <span className="text-2xl">👃</span>
                 </div>
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Olfato</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Aroma seco, fragrância úmida, intensidade e complexidade aromática.
+                </p>
+              </div>
 
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h4 className="text-xl font-bold text-green-800 mb-4">
-                    🤲 Tato
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-green-50 rounded">
-                      <h5 className="font-medium text-green-800">Corpo</h5>
-                      <p className="text-sm text-green-700">
-                        Sensação de peso e textura na boca (leve, médio,
-                        encorpado).
-                      </p>
-                    </div>
-                    <div className="p-3 bg-green-50 rounded">
-                      <h5 className="font-medium text-green-800">
-                        Adstringência
-                      </h5>
-                      <p className="text-sm text-green-700">
-                        Sensação de secura causada por taninos.
-                      </p>
-                    </div>
-                    <div className="p-3 bg-green-50 rounded">
-                      <h5 className="font-medium text-green-800">
-                        Temperatura
-                      </h5>
-                      <p className="text-sm text-green-700">
-                        Diferentes temperaturas revelam aspectos distintos do
-                        café.
-                      </p>
-                    </div>
-                  </div>
+              <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg text-center">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-full w-fit mx-auto mb-3">
+                  <span className="text-2xl">👅</span>
                 </div>
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Paladar</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Doce, ácido, amargo, salgado e umami. Base para identificação de sabores.
+                </p>
+              </div>
+
+              <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg text-center">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-full w-fit mx-auto mb-3">
+                  <span className="text-2xl">🤏</span>
+                </div>
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Tato</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Corpo, textura, viscosidade, adstringência e sensação na boca.
+                </p>
+              </div>
+
+              <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg text-center">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-full w-fit mx-auto mb-3">
+                  <span className="text-2xl">👂</span>
+                </div>
+                <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Audição</h4>
+                <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                  Som da moagem, crepitar dos grãos, ruído da extração - indicadores de qualidade.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3
-                className="text-xl font-bold text-[#884A39] dark:text-white mb-4"
-                id="cupping"
-              >
-                Protocolo de Cupping
-              </h3>
-              <p className="text-[#884A39] dark:text-white dark:text-white mb-4">
-                Cupping é o método padrão internacional para avaliação sensorial
-                de café:
-              </p>
-              <div className="space-y-3">
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    1. Preparação
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    8,25g de café moído grosso em xícara de 150ml. Água a 93°C.
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-8">Protocolo de Cupping</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">1. Preparação</h4>
+                  <ul className="text-sm text-[#884A39]/80 dark:text-amber-100/80 space-y-1">
+                    <li>• 8,25g de café moído médio por xícara</li>
+                    <li>• Água a 93°C, proporção 1:18</li>
+                    <li>• Xícaras de 150ml, preferencialmente brancas</li>
+                    <li>• Ambiente neutro, sem odores</li>
+                  </ul>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">2. Avaliação do Aroma Seco</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Cheire o café moído antes de adicionar água. Identifique intensidade e características aromáticas
+                    iniciais.
                   </p>
                 </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    2. Avaliação do Aroma Seco
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Cheirar o café moído antes da adição de água.
-                  </p>
-                </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    3. Infusão
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Adicionar água e aguardar 4 minutos sem mexer.
-                  </p>
-                </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    4. Breaking
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Quebrar a crosta com colher e avaliar aroma liberado.
-                  </p>
-                </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    5. Degustação
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Aspirar o café com colher em diferentes temperaturas.
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">3. Adição da Água</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Despeje água quente sobre o café, saturando todos os grãos. Aguarde 4 minutos para infusão completa.
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3
-                className="text-xl font-bold text-[#884A39] dark:text-white mb-4"
-                id="notas"
-              >
-                Roda de Sabores
-              </h3>
-              <p className="text-[#884A39] dark:text-white dark:text-white mb-4">
-                Principais categorias de sabores encontrados no café:
-              </p>
-              <div className="space-y-3">
-                <div className="p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
-                  <h4 className="font-medium text-yellow-800">🍋 Frutados</h4>
-                  <p className="text-sm text-yellow-700">
-                    Cítricos, frutas vermelhas, tropicais, frutas com caroço
+              <div className="space-y-6">
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">4. Quebra da Crosta</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Com uma colher, quebre a crosta formada na superfície. Este é o momento de maior intensidade
+                    aromática.
                   </p>
                 </div>
-                <div className="p-3 bg-pink-50 border-l-4 border-pink-500 rounded">
-                  <h4 className="font-medium text-pink-800">🌸 Florais</h4>
-                  <p className="text-sm text-pink-700">
-                    Jasmin, rosa, lavanda, bergamota, chá
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">5. Limpeza da Superfície</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Remova a espuma e partículas flutuantes com duas colheres. Aguarde o café esfriar até 70°C.
                   </p>
                 </div>
-                <div className="p-3 bg-amber-50 border-l-4 border-amber-500 rounded">
-                  <h4 className="font-medium text-amber-800">🍯 Doces</h4>
-                  <p className="text-sm text-amber-700">
-                    Mel, caramelo, açúcar mascavo, baunilha, maple
-                  </p>
-                </div>
-                <div className="p-3 bg-orange-50 border-l-4 border-orange-500 rounded">
-                  <h4 className="font-medium text-orange-800">
-                    🥜 Nozes/Chocolate
-                  </h4>
-                  <p className="text-sm text-orange-700">
-                    Amêndoa, avelã, chocolate ao leite, cacau, nougat
-                  </p>
-                </div>
-                <div className="p-3 bg-green-50 border-l-4 border-green-500 rounded">
-                  <h4 className="font-medium text-green-800">🌿 Herbáceos</h4>
-                  <p className="text-sm text-green-700">
-                    Ervas frescas, capim, vegetais verdes
-                  </p>
-                </div>
-                <div className="p-3 bg-gray-50 border-l-4 border-gray-500 rounded">
-                  <h4 className="font-medium text-gray-800">🔥 Torrados</h4>
-                  <p className="text-sm text-gray-700">
-                    Defumado, torrado, carbônico, tabaco
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-amber-900/30 p-4 rounded-lg">
+                  <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">6. Degustação</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Aspire o café com força para espalhar por toda a boca. Avalie sabor, acidez, corpo e finalização.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-md">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-white mb-8">
-              Desenvolvendo o Paladar
-            </h3>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <h4 className="text-lg font-bold text-[#884A39] dark:text-white mb-4">
-                  Exercícios Básicos
-                </h4>
-                <div className="space-y-3">
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Comparação Direta
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Compare dois cafés lado a lado para identificar
-                      diferenças.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Degustação Cega
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Prove cafés sem saber origem para desenvolver percepção
-                      pura.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Triangulação
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Identifique o diferente entre três amostras (duas iguais,
-                      uma diferente).
-                    </p>
-                  </div>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-8">Roda de Sabores</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
+                <div className="flex items-center gap-2 mb-3">
+                  <Leaf className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  <h4 className="font-bold text-green-800 dark:text-green-300">Florais/Frutados</h4>
                 </div>
+                <ul className="text-sm text-green-700 dark:text-green-200 space-y-1">
+                  <li>• Jasmim, lavanda</li>
+                  <li>• Frutas vermelhas</li>
+                  <li>• Cítricos</li>
+                  <li>• Frutas tropicais</li>
+                  <li>• Frutas de caroço</li>
+                </ul>
               </div>
 
-              <div>
-                <h4 className="text-lg font-bold text-[#884A39] dark:text-white mb-4">
-                  Calibração Sensorial
-                </h4>
-                <div className="space-y-3">
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Referências
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Use alimentos conhecidos como referência para sabores.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Concentração
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Pratique identificar diferentes intensidades do mesmo
-                      sabor.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Memória
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Mantenha diário de degustação para construir biblioteca
-                      sensorial.
-                    </p>
-                  </div>
+              <div className="bg-amber-50 dark:bg-amber-900/30 p-4 rounded-lg">
+                <div className="flex items-center gap-2 mb-3">
+                  <Flame className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                  <h4 className="font-bold text-amber-800 dark:text-amber-300">Doces/Caramelizados</h4>
                 </div>
+                <ul className="text-sm text-amber-700 dark:text-amber-200 space-y-1">
+                  <li>• Chocolate</li>
+                  <li>• Caramelo</li>
+                  <li>• Mel, açúcar mascavo</li>
+                  <li>• Baunilha</li>
+                  <li>• Malte</li>
+                </ul>
               </div>
 
-              <div>
-                <h4 className="text-lg font-bold text-[#884A39] dark:text-white mb-4">
-                  Dicas Importantes
-                </h4>
-                <div className="space-y-3">
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Horário
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Deguste pela manhã quando o paladar está mais sensível.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Neutralização
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Use água entre amostras para limpar o paladar.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h5 className="font-medium text-[#884A39] dark:text-white">
-                      Paciência
-                    </h5>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Desenvolvimento do paladar é gradual e requer prática
-                      constante.
-                    </p>
-                  </div>
+              <div className="bg-orange-50 dark:bg-orange-900/30 p-4 rounded-lg">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-orange-600 dark:text-orange-400 text-xl">🌰</span>
+                  <h4 className="font-bold text-orange-800 dark:text-orange-300">Nozes/Especiarias</h4>
+                </div>
+                <ul className="text-sm text-orange-700 dark:text-orange-200 space-y-1">
+                  <li>• Amêndoa, avelã</li>
+                  <li>• Canela, cravo</li>
+                  <li>• Noz-moscada</li>
+                  <li>• Pimenta</li>
+                  <li>• Cardamomo</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-gray-600 dark:text-gray-400 text-xl">🏭</span>
+                  <h4 className="font-bold text-gray-800 dark:text-gray-300">Outros</h4>
+                </div>
+                <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1">
+                  <li>• Terroso, mineral</li>
+                  <li>• Defumado</li>
+                  <li>• Herbáceo</li>
+                  <li>• Cereais</li>
+                  <li>• Tabaco</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Desenvolvendo o Paladar</h3>
+              <div className="space-y-4">
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Prática Regular</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Deguste diferentes cafés diariamente. Compare origens, processamentos e torras.
+                  </p>
+                </div>
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Calibração</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Participe de sessões de cupping em grupo para calibrar suas percepções com outros degustadores.
+                  </p>
+                </div>
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Memória Sensorial</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Mantenha um diário de degustação. Registre impressões e compare com avaliações posteriores.
+                  </p>
+                </div>
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Treinamento Específico</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Use kits de aromas e sabores para treinar identificação de compostos específicos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">
+                Fatores que Afetam a Degustação
+              </h3>
+              <div className="space-y-4">
+                <div className="p-3 bg-yellow-50 dark:bg-yellow-900/30 border-l-4 border-yellow-400 dark:border-yellow-500 rounded">
+                  <h4 className="font-medium text-yellow-800 dark:text-yellow-300">Temperatura</h4>
+                  <p className="text-sm text-yellow-700 dark:text-yellow-200">
+                    Sabores se revelam em diferentes temperaturas. Avalie o café conforme esfria.
+                  </p>
+                </div>
+                <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-400 dark:border-blue-500 rounded">
+                  <h4 className="font-medium text-blue-800 dark:text-blue-300">Hidratação</h4>
+                  <p className="text-sm text-blue-700 dark:text-blue-200">
+                    Mantenha-se hidratado e limpe o paladar entre amostras com água neutra.
+                  </p>
+                </div>
+                <div className="p-3 bg-purple-50 dark:bg-purple-900/30 border-l-4 border-purple-400 dark:border-purple-500 rounded">
+                  <h4 className="font-medium text-purple-800 dark:text-purple-300">Ambiente</h4>
+                  <p className="text-sm text-purple-700 dark:text-purple-200">
+                    Evite odores externos, ruídos e distrações que possam interferir na concentração.
+                  </p>
+                </div>
+                <div className="p-3 bg-green-50 dark:bg-green-900/30 border-l-4 border-green-400 dark:border-green-500 rounded">
+                  <h4 className="font-medium text-green-800 dark:text-green-300">Estado Físico</h4>
+                  <p className="text-sm text-green-700 dark:text-green-200">
+                    Evite degustação quando doente, após refeições pesadas ou uso de produtos mentolados.
+                  </p>
                 </div>
               </div>
             </div>
@@ -442,5 +286,5 @@ export default function DegustacaoPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

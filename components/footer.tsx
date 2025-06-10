@@ -91,7 +91,7 @@ export function Footer() {
             café para amantes de café.
           </p>
           <p className="text-white/50 text-sm mt-4 md:mt-0">
-            Todos os direitos reservados.
+            Alguns direitos reservados.
           </p>
         </div>
       </div>

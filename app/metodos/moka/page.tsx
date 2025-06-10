@@ -1,54 +1,52 @@
-import Image from "next/image";
-import { Flame, Timer, Thermometer } from "lucide-react";
-import { PageHeader } from "@/components/page-header";
-import { MethodSteps } from "@/components/method-steps";
-import { InfoCard } from "@/components/info-card";
+import Image from "next/image"
+import { Flame, Timer, Scale, Thermometer } from "lucide-react"
+import { PageHeader } from "@/components/page-header"
+import { MethodSteps } from "@/components/method-steps"
+import { InfoCard } from "@/components/info-card"
 
 export default function MokaPage() {
   const mokaSteps = [
     {
       title: "Preparação da Água",
       description:
-        "Aqueça água previamente até aproximadamente 70-80°C. Isso evita que o café fique em contato com o metal quente por muito tempo.",
-      tip: "Água já quente reduz o tempo de extração e evita sabores metálicos ou queimados.",
+        "Aqueça água previamente até aproximadamente 70-80°C. Isso evita que o café fique em contato com a fonte de calor por muito tempo.",
+      tip: "Água pré-aquecida reduz o risco de sabor metálico e queimado no café final.",
     },
     {
       title: "Moagem e Dosagem",
       description:
-        "Moa o café em granulometria média-fina (entre espresso e coado). Encha o compartimento sem compactar.",
+        "Moa o café em granulometria média-fina (entre espresso e V60). Encha o filtro completamente, nivelando sem compactar.",
       tip: "Não compacte o café como no espresso. Apenas nivele suavemente com o dedo.",
     },
     {
       title: "Montagem",
       description:
-        "Coloque a água no compartimento inferior até a válvula. Insira o filtro com café e rosqueie a parte superior.",
-      tip: "Certifique-se que não há resíduos de café nas bordas para garantir vedação perfeita.",
-    },
-    {
-      title: "Aquecimento",
-      description:
-        "Coloque a Moka em fogo baixo com a tampa aberta. Mantenha o cabo afastado da fonte de calor.",
-      tip: "Fogo muito alto pode causar extração rápida demais e sabores desagradáveis.",
+        "Coloque a água quente no compartimento inferior até a válvula de segurança. Insira o filtro com café e rosqueie a parte superior.",
+      tip: "Certifique-se de que não há grãos de café nas bordas, o que pode comprometer a vedação.",
     },
     {
       title: "Extração",
       description:
-        "Observe o café começando a subir. Quando começar a borbulhar e ficar mais claro, retire do fogo.",
-      tip: "O som de 'gorgolejo' indica que a extração está terminando e deve ser interrompida.",
+        "Posicione a cafeteira em fogo baixo com a tampa aberta. O café começará a subir em aproximadamente 3-5 minutos.",
+      tip: "Mantenha o fogo baixo para extração lenta e controlada. Fogo alto resulta em café queimado.",
     },
     {
       title: "Finalização",
-      description:
-        "Resfrie imediatamente a base com água fria ou pano úmido para interromper a extração.",
-      tip: "Este passo é crucial para evitar sabores queimados no final da extração.",
+      description: "Quando ouvir um borbulhar e o fluxo começar a ficar mais claro, retire do fogo imediatamente.",
+      tip: "O som de 'gorgolejo' indica o final da extração. Não deixe extrair até o fim para evitar sabores amargos.",
     },
-  ];
+    {
+      title: "Resfriamento Rápido",
+      description: "Envolva a base em um pano úmido ou coloque em água fria para interromper a extração.",
+      tip: "Este passo é crucial para evitar que os últimos resíduos de café, mais amargos, subam para o reservatório.",
+    },
+  ]
 
   return (
     <div className="min-h-screen">
       <PageHeader
         title="Moka"
-        description="Descubra os segredos da cafeteira italiana que produz um café concentrado e aromático."
+        description="Domine a cafeteira italiana que produz um café concentrado e aromático, tradição em milhões de lares."
         icon={<Flame className="h-8 w-8 text-[#C38154]" />}
       />
 
@@ -56,36 +54,27 @@ export default function MokaPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-[#884A39] dark:text-white mb-6">
-                Tradição Italiana
-              </h2>
-              <div className="space-y-4 text-[#884A39] dark:text-white dark:text-white">
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-6">Tradição Italiana</h2>
+              <div className="space-y-4 text-[#884A39]/80 dark:text-amber-100/90">
                 <p>
-                  A cafeteira Moka, também conhecida como cafeteira italiana,
-                  foi inventada por Alfonso Bialetti em 1933 e revolucionou a
-                  forma como os italianos preparavam café em casa. Seu design
-                  icônico de oito faces é reconhecido mundialmente como símbolo
-                  da cultura cafeeira italiana.
+                  A cafeteira Moka, também conhecida como "cafeteira italiana" ou "Bialetti" (sua marca mais famosa),
+                  foi inventada por Alfonso Bialetti em 1933 e se tornou um ícone do design italiano e da cultura do
+                  café.
                 </p>
                 <p>
-                  Funcionando por pressão de vapor, a Moka força água quente
-                  através do café moído, produzindo uma bebida concentrada que
-                  se situa entre o espresso e o café coado em termos de
-                  intensidade. A pressão gerada (1-2 bar) é menor que a de
-                  máquinas de espresso (9 bar), mas suficiente para extrair
-                  óleos e compostos aromáticos intensos.
+                  Seu funcionamento baseia-se em um princípio simples: a pressão do vapor de água força a passagem da
+                  água quente pelo café moído. Embora a pressão gerada (1-2 bar) seja inferior à de máquinas de espresso
+                  (9 bar), o resultado é um café concentrado e aromático.
                 </p>
                 <p>
-                  Apesar de sua aparente simplicidade, a Moka requer técnica
-                  precisa para evitar sabores queimados ou metálicos. Quando bem
-                  executada, produz um café encorpado, aromático e com crema
-                  leve, perfeito para ser apreciado puro ou como base para
-                  bebidas com leite.
+                  A Moka é apreciada pela sua praticidade, durabilidade e pela capacidade de produzir um café encorpado
+                  com notas intensas. É um método que conecta gerações e continua presente em milhões de lares ao redor
+                  do mundo.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-40" />
+              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-amber-900/30 rounded-full blur-3xl opacity-40" />
               <Image
                 src="/placeholder.svg?height=400&width=500"
                 width={500}
@@ -99,116 +88,108 @@ export default function MokaPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <InfoCard
               title="Moagem"
-              description="Média-fina, entre espresso e coado. Não deve ser compactada."
+              description="Média-fina, entre espresso e V60. Não deve ser tão fina quanto espresso."
               icon={<span className="text-2xl">⚙️</span>}
             />
             <InfoCard
               title="Temperatura"
-              description="Água pré-aquecida a 70-80°C, fogo baixo durante a extração."
+              description="Água pré-aquecida a 70-80°C para evitar superaquecimento do café."
               icon={<Thermometer className="h-6 w-6 text-[#C38154]" />}
             />
             <InfoCard
               title="Tempo"
-              description="2-3 minutos total, desde o início do aquecimento até a extração completa."
+              description="3-5 minutos de extração total em fogo baixo."
               icon={<Timer className="h-6 w-6 text-[#C38154]" />}
             />
             <InfoCard
-              title="Pressão"
-              description="1-2 bar, gerada pelo vapor de água no compartimento inferior."
-              icon={<Flame className="h-6 w-6 text-[#C38154]" />}
+              title="Proporção"
+              description="Filtro cheio de café (aproximadamente 15-18g para Moka de 3 xícaras)."
+              icon={<Scale className="h-6 w-6 text-[#C38154]" />}
             />
           </div>
 
-          <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-white mb-8">
-              Técnica Passo a Passo
-            </h3>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-amber-300 mb-8">Técnica Aprimorada</h3>
             <MethodSteps steps={mokaSteps} />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Anatomia da Moka
-              </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Tamanhos e Capacidades</h3>
               <div className="space-y-4">
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Compartimento Inferior
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Reservatório de água com válvula de segurança. Encha até
-                    abaixo da válvula.
-                  </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b dark:border-gray-700">
+                        <th className="py-2 text-left text-[#884A39] dark:text-amber-200">Tamanho</th>
+                        <th className="py-2 text-left text-[#884A39] dark:text-amber-200">Capacidade</th>
+                        <th className="py-2 text-left text-[#884A39] dark:text-amber-200">Dose de Café</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y dark:divide-gray-700">
+                      <tr>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">1 xícara</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">60ml</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">7g</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">3 xícaras</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">150ml</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">15-18g</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">6 xícaras</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">300ml</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">30-35g</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">9 xícaras</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">450ml</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">45-50g</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">12 xícaras</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">600ml</td>
+                        <td className="py-2 text-[#884A39]/80 dark:text-amber-100/80">60-65g</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Filtro
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Compartimento para o café moído. Deve ser preenchido sem
-                    compactação.
-                  </p>
-                </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Filtro Superior
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Disco metálico com gaxeta que cria vedação. Deve ser mantido
-                    limpo.
-                  </p>
-                </div>
-                <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                  <h4 className="font-medium text-[#884A39] dark:text-white">
-                    Compartimento Superior
-                  </h4>
-                  <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                    Coletor do café extraído com coluna central por onde o café
-                    sobe.
-                  </p>
-                </div>
+                <p className="text-xs text-[#884A39]/70 dark:text-amber-100/70 italic">
+                  *Valores aproximados. A "xícara" na nomenclatura italiana é menor que uma xícara padrão.
+                </p>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Técnicas Avançadas
-              </h3>
-              <div className="space-y-4">
-                <div className="p-3 bg-blue-50 border-l-4 border-blue-500 rounded">
-                  <h4 className="font-medium text-blue-800">Pré-infusão</h4>
-                  <p className="text-sm text-blue-700">
-                    Adicione água quase fervente no compartimento superior e
-                    aguarde 30 segundos antes de montar.
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Mitos e Verdades</h3>
+              <div className="space-y-3">
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Mito: Deve-se compactar o café</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Diferente do espresso, o café na Moka deve apenas ser nivelado, não compactado.
                   </p>
                 </div>
-
-                <div className="p-3 bg-green-50 border-l-4 border-green-500 rounded">
-                  <h4 className="font-medium text-green-800">Toalha Úmida</h4>
-                  <p className="text-sm text-green-700">
-                    Envolva a base com toalha úmida durante a extração para
-                    controlar a temperatura.
-                  </p>
-                </div>
-
-                <div className="p-3 bg-purple-50 border-l-4 border-purple-500 rounded">
-                  <h4 className="font-medium text-purple-800">
-                    Extração Interrompida
+                <div className="p-3 bg-green-50 dark:bg-green-900/30 border-l-4 border-green-400 dark:border-green-500 rounded">
+                  <h4 className="font-medium text-green-800 dark:text-green-300">
+                    Verdade: Água pré-aquecida melhora o sabor
                   </h4>
-                  <p className="text-sm text-purple-700">
-                    Retire do fogo quando apenas 70-80% do café tiver subido
-                    para evitar notas amargas.
+                  <p className="text-sm text-green-700 dark:text-green-200">
+                    Usar água já quente reduz o tempo de contato do café com o metal quente.
                   </p>
                 </div>
-
-                <div className="p-3 bg-amber-50 border-l-4 border-amber-500 rounded">
-                  <h4 className="font-medium text-amber-800">
-                    Água Filtrada Quente
+                <div className="p-3 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-400 dark:border-red-500 rounded">
+                  <h4 className="font-medium text-red-800 dark:text-red-300">Mito: Fogo alto acelera sem prejudicar</h4>
+                  <p className="text-sm text-red-700 dark:text-red-200">
+                    Fogo alto queima o café e resulta em sabores desagradáveis.
+                  </p>
+                </div>
+                <div className="p-3 bg-green-50 dark:bg-green-900/30 border-l-4 border-green-400 dark:border-green-500 rounded">
+                  <h4 className="font-medium text-green-800 dark:text-green-300">
+                    Verdade: Deve-se interromper a extração
                   </h4>
-                  <p className="text-sm text-amber-700">
-                    Use água filtrada já aquecida a 80°C para reduzir tempo no
-                    fogo e melhorar sabor.
+                  <p className="text-sm text-green-700 dark:text-green-200">
+                    Retirar do fogo quando começar o "gorgolejo" evita amargor excessivo.
                   </p>
                 </div>
               </div>
@@ -216,103 +197,82 @@ export default function MokaPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Manutenção e Cuidados
-              </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Manutenção e Cuidados</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
+                  <div className="bg-[#F9E0BB] dark:bg-amber-900/50 p-2 rounded-full">
                     <span className="text-sm">🧼</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-[#884A39] dark:text-white">
-                      Limpeza
-                    </h4>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Lave apenas com água quente, sem detergente. Seque
-                      completamente após o uso.
+                    <h4 className="font-medium text-[#884A39] dark:text-amber-200">Limpeza</h4>
+                    <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                      Lave apenas com água quente. Evite detergentes que podem deixar resíduos e afetar o sabor.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
-                    <span className="text-sm">🔄</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-[#884A39] dark:text-white">
-                      Gaxeta e Filtro
-                    </h4>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Substitua a gaxeta e o filtro anualmente ou quando
-                      apresentarem desgaste.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
+                  <div className="bg-[#F9E0BB] dark:bg-amber-900/50 p-2 rounded-full">
                     <span className="text-sm">⚠️</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-[#884A39] dark:text-white">
-                      Válvula de Segurança
-                    </h4>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Mantenha limpa e desobstruída. Verifique regularmente seu
-                      funcionamento.
+                    <h4 className="font-medium text-[#884A39] dark:text-amber-200">Vedação</h4>
+                    <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                      Verifique regularmente o estado da borracha de vedação e substitua quando necessário.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
+                  <div className="bg-[#F9E0BB] dark:bg-amber-900/50 p-2 rounded-full">
+                    <span className="text-sm">🔧</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-[#884A39] dark:text-amber-200">Válvula de Segurança</h4>
+                    <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                      Mantenha a válvula limpa e desobstruída. Ela é essencial para a segurança.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="bg-[#F9E0BB] dark:bg-amber-900/50 p-2 rounded-full">
                     <span className="text-sm">🔥</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-[#884A39] dark:text-white">
-                      Condicionamento
-                    </h4>
-                    <p className="text-sm text-[#884A39] dark:text-white dark:text-white">
-                      Faça algumas extrações descartáveis ao usar uma Moka nova
-                      para remover resíduos de fabricação.
+                    <h4 className="font-medium text-[#884A39] dark:text-amber-200">Cabo</h4>
+                    <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                      Posicione o cabo para fora da fonte de calor para evitar danos.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] dark:text-white mb-4">
-                Solução de Problemas
-              </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Solução de Problemas</h3>
               <div className="space-y-3">
-                <div className="p-3 bg-red-50 border-l-4 border-red-400 rounded">
-                  <h4 className="font-medium text-red-800">Sabor Metálico</h4>
-                  <p className="text-sm text-red-700">
-                    Use água pré-aquecida e mantenha a Moka limpa. Considere
-                    condicioná-la com algumas extrações descartáveis.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Café não sobe</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Verifique se a moagem não está muito fina, se há vedação adequada, ou se a válvula está obstruída.
                   </p>
                 </div>
-                <div className="p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
-                  <h4 className="font-medium text-yellow-800">Café Não Sobe</h4>
-                  <p className="text-sm text-yellow-700">
-                    Verifique se a moagem não está muito fina, se há vedação
-                    adequada, ou se a válvula está obstruída.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Café muito amargo</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Use água pré-aquecida, fogo mais baixo, e interrompa a extração mais cedo.
                   </p>
                 </div>
-                <div className="p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
-                  <h4 className="font-medium text-blue-800">Vazamentos</h4>
-                  <p className="text-sm text-blue-700">
-                    Verifique a gaxeta, certifique-se que não há resíduos de
-                    café nas bordas e que as partes estão bem rosqueadas.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Café fraco</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Experimente uma moagem ligeiramente mais fina ou aumente a quantidade de café.
                   </p>
                 </div>
-                <div className="p-3 bg-purple-50 border-l-4 border-purple-400 rounded">
-                  <h4 className="font-medium text-purple-800">
-                    Sabor Queimado
-                  </h4>
-                  <p className="text-sm text-purple-700">
-                    Use fogo mais baixo, água pré-aquecida e retire do fogo
-                    assim que começar a borbulhar.
+                <div className="p-3 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded">
+                  <h4 className="font-medium text-[#884A39] dark:text-amber-200">Vazamentos</h4>
+                  <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80">
+                    Verifique a borracha de vedação, certifique-se de que não há grãos nas bordas, e que as partes estão
+                    bem rosqueadas.
                   </p>
                 </div>
               </div>
@@ -321,5 +281,5 @@ export default function MokaPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

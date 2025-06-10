@@ -1,29 +1,25 @@
 interface MethodStepsProps {
   steps: Array<{
-    title: string;
-    description: string;
-    tip?: string;
-  }>;
+    title: string
+    description: string
+    tip?: string
+  }>
 }
 
 export function MethodSteps({ steps }: MethodStepsProps) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {steps.map((step, index) => (
-        <div key={index} className="flex gap-4">
-          <div className="flex-shrink-0 w-8 h-8 bg-[#C38154 text-white rounded-full flex items-center justify-center font-bold">
+        <div key={index} className="flex flex-col sm:flex-row gap-4">
+          <div className="flex-shrink-0 w-8 h-8 step-number rounded-full flex items-center justify-center font-bold text-sm">
             {index + 1}
           </div>
           <div className="flex-1">
-            <h4 className="font-bold text-[#884A39] dark:text-white mb-2">
-              {step.title}
-            </h4>
-            <p className="text-[#884A39] dark:text-white dark:text-white mb-2">
-              {step.description}
-            </p>
+            <h4 className="font-bold text-foreground mb-2 text-sm md:text-base">{step.title}</h4>
+            <p className="text-muted-foreground mb-2 text-sm md:text-base leading-relaxed">{step.description}</p>
             {step.tip && (
-              <div className="bg-[#F9E0BB]/50 p-3 rounded-lg">
-                <p className="text-sm text-[#884A39] dark:text-white">
+              <div className="info-box">
+                <p className="text-sm text-foreground">
                   <span className="font-medium">💡 Dica:</span> {step.tip}
                 </p>
               </div>
@@ -32,5 +28,5 @@ export function MethodSteps({ steps }: MethodStepsProps) {
         </div>
       ))}
     </div>
-  );
+  )
 }

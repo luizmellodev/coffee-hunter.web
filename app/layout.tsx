@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   title: "Coffee Hunter - Guia Completo de Cafés Especiais",
   description:
     "Aprenda tudo sobre cafés especiais: métodos de preparo, processamento, torra e muito mais.",
-  generator: "luizmello.dev",
 };
 
 export default function RootLayout({
@@ -39,7 +38,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
