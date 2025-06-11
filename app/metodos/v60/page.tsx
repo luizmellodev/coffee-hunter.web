@@ -77,7 +77,7 @@ export default function V60Page() {
             <div className="relative">
               <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-amber-900/30 rounded-full blur-3xl opacity-40" />
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/v60.jpg"
                 width={500}
                 height={400}
                 alt="Hario V60 em uso"

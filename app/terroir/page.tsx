@@ -47,11 +47,11 @@ export default function TerroirPage() {
             <div className="relative">
               <div className="absolute -z-10 inset-0 bg-gradient-to-r from-coffee-200 to-gold-200 dark:from-coffee-800 dark:to-coffee-700 rounded-full blur-3xl opacity-40" />
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/terroir.jpg"
                 width={500}
-                height={400}
+                height={500}
                 alt="Paisagem de plantação de café em montanha"
-                className="rounded-2xl shadow-lg w-full h-auto"
+                className="rounded-2xl shadow-lg object-cover"
               />
             </div>
           </div>

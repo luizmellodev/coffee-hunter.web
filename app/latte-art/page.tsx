@@ -38,7 +38,7 @@ export default function LatteArtPage() {
             <div className="relative">
               <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-amber-900/30 rounded-full blur-3xl opacity-40" />
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/latteart.jpeg"
                 width={500}
                 height={400}
                 alt="Latte Art"
@@ -132,7 +132,7 @@ export default function LatteArtPage() {
               <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Coração</h3>
               <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/heart.webp"
                   fill
                   alt="Latte Art - Coração"
                   className="object-cover"
@@ -158,7 +158,7 @@ export default function LatteArtPage() {
               <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Roseta</h3>
               <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/rosetta.jpg"
                   fill
                   alt="Latte Art - Roseta"
                   className="object-cover"
@@ -185,7 +185,7 @@ export default function LatteArtPage() {
               <h3 className="text-xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Tulipa</h3>
               <div className="aspect-square relative mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/tulip.webp"
                   fill
                   alt="Latte Art - Tulipa"
                   className="object-cover"
@@ -280,7 +280,7 @@ export default function LatteArtPage() {
                 </p>
                 <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=150&width=250"
+                    src="/cisnic.jpg"
                     fill
                     alt="Latte Art - Cisne"
                     className="object-cover"
@@ -295,7 +295,7 @@ export default function LatteArtPage() {
                 </p>
                 <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=150&width=250"
+                    src="/multipleroseta.jpg"
                     fill
                     alt="Latte Art - Roseta Múltipla"
                     className="object-cover"
@@ -310,7 +310,7 @@ export default function LatteArtPage() {
                 </p>
                 <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=150&width=250"
+                    src="/etching.jpeg"
                     fill
                     alt="Latte Art - Etching"
                     className="object-cover"

@@ -37,7 +37,7 @@ export default function VariedadesPage() {
             <div className="relative">
               <div className="absolute -z-10 inset-0 bg-gradient-to-r from-coffee-200 to-gold-200 dark:from-coffee-800 dark:to-coffee-700 rounded-full blur-3xl opacity-40" />
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/coffeespecies.webp"
                 width={500}
                 height={400}
                 alt="Diferentes variedades de café"

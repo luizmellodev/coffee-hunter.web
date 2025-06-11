@@ -43,7 +43,7 @@ export function Footer() {
                 Terroir
               </Link>
               <Link
-                href="/metodos/espresso"
+                href="/metodos"
                 className="block text-white/70 hover:text-gold-300 transition-colors"
               >
                 Métodos
