@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Beaker, Droplets, Sun, Zap } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import { NavigationSection } from "@/components/NavigationSection"
 
 export default function ProcessamentoPage() {
   return (
@@ -253,6 +254,11 @@ export default function ProcessamentoPage() {
           </div>
         </div>
       </section>
+
+      <NavigationSection
+      beforeNav={{ href: "/colheita", label: "Colheita de café" }}
+        afterNav={{ href: "/torra", label: "Torra do café" }}
+      />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Heart, Coffee, BookOpen, Users } from "lucide-react"
+import { Heart, Mail, Instagram } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -8,181 +8,109 @@ export default function SobrePage() {
   return (
     <div className="min-h-screen">
       <PageHeader
-        title="Sobre o CaféSaber"
-        description="Conheça nossa missão de compartilhar conhecimento e paixão pelo mundo dos cafés especiais."
+        title="Sobre o Coffee Hunter"
+        description="Um pouco sobre mim e a jornada de criação deste site."
         icon={<Heart className="h-8 w-8 text-[#C38154]" />}
       />
 
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-[#884A39] mb-6">Nossa História</h2>
-              <div className="space-y-4 text-[#884A39]/80">
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6">Minha História</h2>
+              <div className="space-y-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
                 <p>
-                  O CaféSaber nasceu da paixão por compartilhar conhecimento sobre o universo dos cafés especiais.
-                  Acreditamos que a educação é o caminho para valorizar toda a cadeia do café, desde o produtor até o
-                  consumidor final.
+                  E aí! Sou o Luiz, um dev iOS que decidiu se aventurar no mundo do desenvolvimento web. Apaixonado por
+                  café, estou atualmente tentando aprender latte art (com muitas tentativas frustradas, mas
+                  persistindo!).
                 </p>
                 <p>
-                  Nossa jornada começou com a percepção de que faltavam recursos educativos acessíveis e completos em
-                  português sobre cafés especiais. Decidimos criar uma plataforma que reunisse informações técnicas
-                  precisas, mas apresentadas de forma amigável e compreensível.
+                  Sempre senti falta de ter um material completo e bem organizado sobre cafés especiais em português.
+                  Então resolvi criar este site como um projeto pessoal, juntando conhecimentos de vários artigos,
+                  canais no YouTube, perfis no Instagram e muitas conversas com especialistas.
                 </p>
                 <p>
-                  Hoje, o CaféSaber é um guia completo para entusiastas, profissionais e curiosos que desejam aprofundar
-                  seus conhecimentos sobre café especial, desde o cultivo até os métodos de preparo mais refinados.
+                  Este projeto é uma forma de organizar o que aprendi e compartilhar com outros entusiastas. Não sou um
+                  especialista, apenas alguém que ama café e quer aprender mais sobre esse universo fascinante.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-40" />
+              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-[#C38154]/30 rounded-full blur-3xl opacity-40" />
               <Image
                 src="/placeholder.svg?height=400&width=500"
                 width={500}
                 height={400}
-                alt="Equipe CaféSaber"
+                alt="Desenvolvedor trabalhando com café"
                 className="rounded-2xl shadow-lg"
               />
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] mb-8 text-center">Nossa Missão</h3>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-8 text-center">Agradecimentos</h3>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <BookOpen className="h-8 w-8 text-[#C38154]" />
+            <div className="space-y-6 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
+              <p className="text-center max-w-3xl mx-auto">
+                Este site não seria possível sem a ajuda e conhecimento compartilhado por muitas pessoas. Gostaria de
+                agradecer especialmente:
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">João - Williams and Sons</h4>
+                  <p className="text-sm">
+                    Pelas conversas inspiradoras e pelo conhecimento compartilhado sobre o mundo dos cafés especiais (e pelo nome Coffee Hunter!).
+                  </p>
                 </div>
-                <h4 className="text-xl font-bold text-[#884A39] mb-3">Educar</h4>
-                <p className="text-[#884A39]/80">
-                  Compartilhar conhecimento técnico e acessível sobre todos os aspectos do café especial, desde a
-                  produção até o consumo.
-                </p>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">Cássio - Café ao Quadrado</h4>
+                  <p className="text-sm">Pelos insights valiosos e pela paixão contagiante pelo café de qualidade.</p>
+                </div>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Coffee className="h-8 w-8 text-[#C38154]" />
-                </div>
-                <h4 className="text-xl font-bold text-[#884A39] mb-3">Inspirar</h4>
-                <p className="text-[#884A39]/80">
-                  Despertar a curiosidade e paixão pelo café especial, incentivando a exploração de sabores, origens e
-                  métodos.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#F9E0BB] rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-[#C38154]" />
-                </div>
-                <h4 className="text-xl font-bold text-[#884A39] mb-3">Conectar</h4>
-                <p className="text-[#884A39]/80">
-                  Criar pontes entre consumidores, produtores e estabelecimentos, fortalecendo a comunidade cafeeira.
-                </p>
-              </div>
+              <p className="text-center max-w-3xl mx-auto mt-6">
+                E a todos os baristas, produtores, torrefadores e entusiastas que compartilham seu conhecimento online e
+                pessoalmente.
+              </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] mb-4">Nossos Valores</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
-                    <span className="text-sm">🔍</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-[#884A39]">Precisão</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Compromisso com informações técnicas corretas e atualizadas, baseadas em pesquisa e experiência.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
-                    <span className="text-sm">🌱</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-[#884A39]">Sustentabilidade</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Valorização de práticas que respeitam o meio ambiente e promovem justiça social na cadeia do café.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
-                    <span className="text-sm">🤝</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-[#884A39]">Comunidade</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Fomento ao senso de pertencimento e troca entre todos os envolvidos no universo do café.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="bg-[#F9E0BB] p-2 rounded-full">
-                    <span className="text-sm">🎨</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-[#884A39]">Acessibilidade</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Apresentação do conhecimento de forma clara e acolhedora para todos os níveis de experiência.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="bg-[#F9E0BB]/20 dark:bg-gray-800 p-8 rounded-xl shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6 text-center">Sobre o Conteúdo</h3>
 
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold text-[#884A39] mb-4">Equipe</h3>
-              <div className="space-y-4">
-                <p className="text-[#884A39]/80">
-                  Somos um grupo diverso de profissionais apaixonados por café, incluindo:
-                </p>
-                <div className="space-y-3">
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h4 className="font-medium text-[#884A39]">Baristas Certificados</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Com experiência em competições nacionais e internacionais.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h4 className="font-medium text-[#884A39]">Q-Graders</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Especialistas em avaliação sensorial e classificação de cafés.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h4 className="font-medium text-[#884A39]">Agrônomos</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Focados em práticas sustentáveis de cultivo e processamento.
-                    </p>
-                  </div>
-                  <div className="p-3 bg-[#F9E0BB]/30 rounded">
-                    <h4 className="font-medium text-[#884A39]">Educadores</h4>
-                    <p className="text-sm text-[#884A39]/80">
-                      Especialistas em traduzir conhecimento técnico em conteúdo acessível.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="space-y-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90 max-w-3xl mx-auto">
+              <p>
+                O conteúdo deste site foi compilado de diversas fontes, incluindo artigos, livros, vídeos e conversas
+                com profissionais do café. Embora eu tenha me esforçado para garantir a precisão das informações, posso
+                ter cometido erros ou imprecisões.
+              </p>
+
+              <p>
+                Se você encontrar alguma informação incorreta ou tiver sugestões para melhorar o conteúdo, por favor,
+                entre em contato. Estou sempre aberto a aprender mais e corrigir qualquer erro.
+              </p>
+
+              <p>
+                Este é um projeto em constante evolução, e novas seções e informações serão adicionadas regularmente.
+              </p>
             </div>
           </div>
 
-          <div className="bg-[#884A39] text-white rounded-2xl p-8 shadow-md text-center">
-            <h3 className="text-2xl font-bold mb-4">Junte-se à Nossa Comunidade</h3>
+          <div className="bg-[#884A39] text-white dark:bg-gray-900 rounded-2xl p-8 shadow-md text-center">
+            <h3 className="text-2xl font-bold mb-4">Entre em Contato</h3>
             <p className="max-w-2xl mx-auto mb-8">
-              Faça parte do movimento de valorização do café especial. Explore nosso conteúdo, visite cafeterias
-              parceiras e compartilhe sua jornada no mundo do café.
+              Tem alguma sugestão, correção ou apenas quer bater um papo sobre café? Ficarei feliz em ouvir de você!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-white text-[#884A39] hover:bg-[#F9E0BB] px-8 py-6 rounded-full">
-                <Link href="/visite-cafeterias">
-                  <Coffee className="mr-2 h-5 w-5" />
-                  Encontrar Cafeterias
+              <Button
+                asChild
+                className="bg-white text-[#884A39] hover:bg-[#F9E0BB] dark:hover:bg-[#F9E0BB]/80 px-8 py-6 rounded-full"
+              >
+                <Link href="https://instagram.com/luizdudu" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Instagram
                 </Link>
               </Button>
               <Button
@@ -190,9 +118,9 @@ export default function SobrePage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
               >
-                <Link href="/">
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  Explorar Conteúdo
+                <Link href="mailto:contato@luizmello.dev">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email
                 </Link>
               </Button>
             </div>

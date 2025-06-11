@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Flame, Timer, Thermometer, TrendingUp } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import { NavigationSection } from "@/components/NavigationSection"
 
 export default function TorraPage() {
   return (
@@ -293,6 +294,11 @@ export default function TorraPage() {
           </div>
         </div>
       </section>
+
+      <NavigationSection
+      beforeNav={{ href: "/processamento", label: "Processamento de café" }}
+        afterNav={{ href: "/armazenamento", label: "Como armazenar o café?" }}
+      />
     </div>
   )
 }

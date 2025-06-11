@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Mountain, Thermometer, Cloud, Leaf } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { InfoCard } from "@/components/info-card";
+import { NavigationSection } from "@/components/NavigationSection";
 
 export default function TerroirPage() {
   return (
@@ -447,6 +448,12 @@ export default function TerroirPage() {
           </div>
         </div>
       </section>
+
+
+      <NavigationSection
+      beforeNav={{ href: "/variedades", label: "Variedades de Café" }}
+        afterNav={{ href: "/colheita", label: "A colheita de café" }}
+      />
     </div>
   );
 }

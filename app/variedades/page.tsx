@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Dna, MapPin, Award, TrendingUp } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import { NavigationSection } from "@/components/NavigationSection"
 
 export default function VariedadesPage() {
   return (
@@ -257,6 +258,11 @@ export default function VariedadesPage() {
           </div>
         </div>
       </section>
+
+            <NavigationSection
+            beforeNav={{ href: "/cafe-especial", label: "O que é café especial?" }}
+              afterNav={{ href: "/terroir", label: "Terroir: o local importa!" }}
+            />
     </div>
   )
 }

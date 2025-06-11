@@ -293,9 +293,16 @@ export default function MetodosPage() {
 
           {/* Cards dos Métodos */}
           <div className="mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-8 text-center">
               Explore Cada Método
             </h2>
+
+            <p className="text-lg text-[#884A39]/80 dark:text-amber-100/90 leading-relaxed mb-8">
+              Cada método de preparo oferece uma experiência única. Clique em cada um para aprender mais sobre suas
+              características, perfil de sabor e dicas de preparo.
+            </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {metodos.map((metodo, index) => (
                 <Link key={index} href={metodo.href} className="group">

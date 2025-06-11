@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Mountain, Calendar, Hand, Leaf } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import { NavigationSection } from "@/components/NavigationSection"
 
 export default function ColheitaPage() {
   return (
@@ -196,6 +197,11 @@ export default function ColheitaPage() {
           </div>
         </div>
       </section>
+
+      <NavigationSection
+      beforeNav={{ href: "/terroir", label: "Terroir: o local importa!" }}
+        afterNav={{ href: "/processamento", label: "Processamento: do fruto à bebida" }}
+      />
     </div>
   )
 }

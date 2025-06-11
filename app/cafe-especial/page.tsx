@@ -2,6 +2,10 @@ import Image from "next/image"
 import { Award, TrendingUp, Globe, Users } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import Link from "next/link";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NavigationSection } from "@/components/NavigationSection";
 
 export default function CafeEspecialPage() {
   return (
@@ -164,6 +168,10 @@ export default function CafeEspecialPage() {
           </div>
         </div>
       </section>
+      
+      <NavigationSection
+        afterNav={{ href: "/variedades", label: "Variedades do café" }}
+      />
     </div>
   )
 }

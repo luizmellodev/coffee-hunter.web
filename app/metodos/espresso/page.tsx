@@ -89,17 +89,17 @@ export default function EspressoPage() {
             <InfoCard
               title="Dose"
               description="18-20g de café moído fino para espresso duplo (dose padrão atual)."
-              icon={<Gauge className="h-6 w-6 text-[#C38154]" />}
+              icon={<Gauge className="h-6 w-6 text-[#C38154] dark:text-white dark:text-white" />}
             />
             <InfoCard
               title="Tempo"
               description="25-30 segundos de extração para 25-35ml de bebida final."
-              icon={<Timer className="h-6 w-6 text-[#C38154]" />}
+              icon={<Timer className="h-6 w-6 text-[#C38154] dark:text-white" />}
             />
             <InfoCard
               title="Temperatura"
               description="90-96°C na saída do grupo, variando conforme o perfil de torra."
-              icon={<Thermometer className="h-6 w-6 text-[#C38154]" />}
+              icon={<Thermometer className="h-6 w-6 text-[#C38154] dark:text-white" />}
             />
             <InfoCard
               title="Pressão"

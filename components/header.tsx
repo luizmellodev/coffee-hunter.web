@@ -235,7 +235,7 @@ export function Header() {
               </h3>
               <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
                 <Link
-                  href="/metodos/espresso"
+                  href="/metodos"
                   className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -255,7 +255,48 @@ export function Header() {
                 >
                   AeroPress
                 </Link>
+                                <Link
+                  href="/metodos/chemex"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Chemex
+                </Link>
+                                                <Link
+                  href="/metodos/french-press"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Prensa Francesa
+                </Link>
+
+                                                                <Link
+                  href="/metodos/moka"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Moka
+                </Link>
               </div>
+                                              <Link
+                  href="/latte-art"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors pt-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
+                Latte Art
+              </h3>
+                </Link>
+
+                                                <Link
+                  href="/degustacao"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
+                Degustação
+              </h3>
+                </Link>
             </div>
             <Button
               asChild

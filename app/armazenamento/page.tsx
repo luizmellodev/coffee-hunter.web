@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Package, Thermometer, Droplets, Calendar } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
+import { NavigationSection } from "@/components/NavigationSection"
 
 export default function ArmazenamentoPage() {
   return (
@@ -318,6 +319,11 @@ export default function ArmazenamentoPage() {
           </div>
         </div>
       </section>
+
+      <NavigationSection
+      beforeNav={{ href: "/torra", label: "A torra do café" }}
+        afterNav={{ href: "/metodos", label: "Métodos" }}
+      />
     </div>
   )
 }
