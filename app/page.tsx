@@ -343,6 +343,11 @@ export default function Home() {
               icon={<span className="text-2xl md:text-3xl">👃</span>}
             >
               <div className="space-y-4 md:space-y-6">
+              <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/degustacao"
                   className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
@@ -350,6 +355,12 @@ export default function Home() {
                   <span>Análise Sensorial</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/degustacao#cupping"
                   className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
@@ -357,6 +368,12 @@ export default function Home() {
                   <span>Cupping</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/degustacao#notas"
                   className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
@@ -364,6 +381,7 @@ export default function Home() {
                   <span>Identificação de Notas</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
               </div>
             </InfoCard>
 
@@ -377,7 +395,7 @@ export default function Home() {
               <div className="pt-3 md:pt-4">
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-coffee-700 to-coffee-800 hover:from-coffee-800 hover:to-coffee-900 dark:from-coffee-300 dark:to-coffee-200 dark:text-coffee-900 text-white border-0 rounded-full text-sm"
+                  className="w-full bg-gradient-to-r from-coffee-700 to-coffee-800 dark:from-coffee-300 dark:to-coffee-200 dark:text-coffee-900 text-white border-0 rounded-full text-sm hover:scale-110 transition-transform duration-300"
                 >
                   <Link href="/visite-cafeterias">Encontrar Cafeterias</Link>
                 </Button>

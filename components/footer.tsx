@@ -66,7 +66,7 @@ export function Footer() {
                 href="/sobre"
                 className="block text-white/70 hover:text-gold-300 transition-colors"
               >
-                Sobre Nós
+                Sobre
               </Link>
               <Link
                 href="/latte-art"
@@ -87,8 +87,7 @@ export function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm flex items-center gap-2">
             © {new Date().getFullYear()} Coffee Hunter. Feito com{" "}
-            <Heart className="inline h-4 w-4 text-red-400" /> por amantes de
-            café para amantes de café.
+            <Heart className="inline h-4 w-4 text-red-400" /> para amantes de café.
           </p>
           <p className="text-white/50 text-sm mt-4 md:mt-0">
             Alguns direitos reservados.

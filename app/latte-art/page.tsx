@@ -276,7 +276,7 @@ export default function LatteArtPage() {
               <div className="p-4 bg-[#F9E0BB]/30 dark:bg-amber-900/30 rounded-lg">
                 <h4 className="font-bold text-[#884A39] dark:text-amber-200 mb-2">Cisne</h4>
                 <p className="text-sm text-[#884A39]/80 dark:text-amber-100/80 mb-3">
-                  Combinação de roseta com manipulação do pescoço e cabeça usando um palito.
+                  Combinação de roseta com manipulação do pescoço e cabeça.
                 </p>
                 <div className="aspect-video relative bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
                   <Image

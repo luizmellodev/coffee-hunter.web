@@ -76,10 +76,10 @@ export default function SobrePage() {
             </div>
           </div>
 
-          <div className="bg-[#F9E0BB]/20 dark:bg-gray-800 p-8 rounded-xl shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6 text-center">Sobre o Conteúdo</h3>
+          <div className="bg-[#884A39] text-white dark:bg-gray-90 p-8 rounded-xl shadow-md mb-16">
+            <h3 className="text-2xl font-bold text-[#F9E0BB] dark:text-[#F9E0BB] mb-6 text-center">Sobre o Conteúdo</h3>
 
-            <div className="space-y-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90 max-w-3xl mx-auto">
+            <div className="space-y-4 text-[#F9E0BB] dark:text-[#F9E0BB]/90 max-w-3xl mx-auto">
               <p>
                 O conteúdo deste site foi compilado de diversas fontes, incluindo artigos, livros, vídeos e conversas
                 com profissionais do café. Embora eu tenha me esforçado para garantir a precisão das informações, posso
@@ -97,7 +97,7 @@ export default function SobrePage() {
             </div>
           </div>
 
-          <div className="bg-[#884A39] text-white dark:bg-gray-900 rounded-2xl p-8 shadow-md text-center">
+          <div className="bg-[#F9E0BB]/20 dark:bg-gray-800 text-black dark:text-white rounded-2xl p-8 shadow-md text-center">
             <h3 className="text-2xl font-bold mb-4">Entre em Contato</h3>
             <p className="max-w-2xl mx-auto mb-8">
               Tem alguma sugestão, correção ou apenas quer bater um papo sobre café? Ficarei feliz em ouvir de você!
@@ -106,7 +106,7 @@ export default function SobrePage() {
                             <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
+                className="border-white text-black dark:text-white hover:bg-white/20 px-8 py-6 rounded-full"
               >
                 <Link href="https://luizmello.dev" target="_blank" rel="noopener noreferrer">
                   Meu Site
@@ -124,7 +124,7 @@ export default function SobrePage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
+                className="border-white text-black dark:text-white hover:bg-white/20 px-8 py-6 rounded-full"
               >
                 <Link href="mailto:contato@luizmello.dev">
                   <Mail className="mr-2 h-5 w-5" />

@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { link } from "fs"
+import LottieAnimation from "@/components/LottieAnimation"
 
 export default function VisiteCafeteriasPage() {
   const influencers = [
@@ -90,21 +91,18 @@ export default function VisiteCafeteriasPage() {
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#C38154] hover:bg-[#884A39] text-white px-8 py-6 rounded-full">
-                  <Coffee className="mr-2 h-5 w-5" />
-                  Em breve para iOS
-                </Button>
+                <div className="bg-[#F9E0BB] border-l-4 border-[#C38154] p-4 rounded-r-lg flex items-center space-x-3">
+                  <Coffee className="h-5 w-5 text-[#884A39]" />
+                  <div>
+                    <p className="text-[#884A39] font-medium">Em desenvolvimento!</p>
+                    <p className="text-[#884A39]/80 text-sm">Estamos trabalhando bastante para trazer o app em breve.</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-40" />
-              <Image
-                src="/placeholder.svg?height=500&width=400"
-                width={400}
-                height={500}
-                alt="CaféMap App Interface"
-                className="rounded-2xl shadow-lg mx-auto"
-              />
+              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] rounded-full blur-3xl opacity-10" />
+              <LottieAnimation animation="pccafe"></LottieAnimation>
             </div>
           </div>
 
