@@ -22,8 +22,8 @@ export default function Home() {
 
         <div className="container relative">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-              <div className="animate-fade-in order-2 lg:order-1">
+<div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div className="animate-fade-in order-1 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full glass-effect text-xs md:text-sm text-muted-foreground mb-6 md:mb-8">
                   <Sparkles className="h-3 w-3 md:h-4 md:w-4" />
                   <span>Seu guia completo para cafés especiais</span>
@@ -49,7 +49,7 @@ export default function Home() {
                     size="lg"
                     className="bg-gradient-to-r from-coffee-700 to-coffee-800 hover:from-coffee-800 hover:to-coffee-900 dark:from-coffee-300 dark:to-coffee-200 dark:text-coffee-900 text-white border-0 rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg group"
                   >
-                    <Link href="/cafe-especial">
+                  <Link href="/cafe-especial">
                       <BookOpen className="mr-2 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
                       Começar a Aprender
                     </Link>
@@ -68,21 +68,24 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-
-                <div className="relative animate-fade-in order-1 lg:order-2">
-                <div className="absolute -inset-4 bg-gradient-to-r from-coffee-200 to-gold-200 dark:from-black dark:to-gray-950 blur-3xl opacity-30" />
-                <LottieAnimation
-                  animation="catcoffee"
-                  width="100%"
-                  height="100%"
-                />
-                </div>
+<div className="relative animate-fade-in order-1 lg:order-2">
+  <div className="relative animate-fade-in order-2">
+    <div className="absolute -inset-4 bg-gradient-to-r from-coffee-200 to-gold-200 dark:from-black dark:to-gray-950 blur-3xl opacity-30" />
+    <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-full lg:h-full mx-auto">
+      <LottieAnimation
+        animation="catcoffee"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
       </section>
 
-    {/* Stats Section */}
+      {/* Stats Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-coffee-900 via-coffee-800 to-coffee-900 dark:from-black dark:via-coffee-950 dark:to-black text-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
@@ -121,7 +124,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Features Section */}
       <section className="py-16 md:py-24 lg:py-32">
         <div className="container">
@@ -144,28 +147,46 @@ export default function Home() {
                 <Award className="h-6 w-6 md:h-8 md:w-8 text-coffee-700 dark:text-coffee-300" />
               }
             >
-              <div className="space-y-2 md:space-y-3">
+              <div className="space-y-4 md:space-y-6">
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/cafe-especial"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
-                  <span>O que é Café Especial</span>
+                  <span>O que é Café Especial?</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/variedades"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Variedades de Café</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/terroir"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Terroir e Origem</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
               </div>
             </InfoCard>
 
@@ -174,28 +195,46 @@ export default function Home() {
               description="Acompanhe toda a jornada do café, desde o cultivo até o processamento e torra."
               icon={<span className="text-2xl md:text-3xl">🌱</span>}
             >
-              <div className="space-y-2 md:space-y-3">
+              <div className="space-y-4 md:space-y-6">
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/colheita"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Cultivo e Colheita</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/processamento"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Processamento</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/torra"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Torra</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
               </div>
             </InfoCard>
 
@@ -206,28 +245,47 @@ export default function Home() {
                 <Coffee className="h-6 w-6 md:h-8 md:w-8 text-coffee-700 dark:text-coffee-300" />
               }
             >
-              <div className="space-y-2 md:space-y-3">
+              <div className="space-y-4 md:space-y-6">
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/metodos/espresso"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Espresso</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/metodos/v60"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Hario V60</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/metodos/aeropress"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>AeroPress</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
               </div>
             </InfoCard>
 
@@ -236,28 +294,46 @@ export default function Home() {
               description="Aprenda a criar arte no leite, desde técnicas básicas até desenhos avançados."
               icon={<span className="text-2xl md:text-3xl">🎨</span>}
             >
-              <div className="space-y-2 md:space-y-3">
+              <div className="space-y-4 md:space-y-6">
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/latte-art"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Técnicas Básicas</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/latte-art#vaporizacao"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Vaporização do Leite</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="w-full justify-between h-auto p-2 text-sm hover:bg-accent/50"
+                >
                 <Link
                   href="/latte-art#desenhos"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Desenhos Avançados</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                </Button>
               </div>
             </InfoCard>
 
@@ -266,24 +342,24 @@ export default function Home() {
               description="Desenvolva seu paladar e aprenda a identificar notas sensoriais complexas."
               icon={<span className="text-2xl md:text-3xl">👃</span>}
             >
-              <div className="space-y-2 md:space-y-3">
+              <div className="space-y-4 md:space-y-6">
                 <Link
                   href="/degustacao"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Análise Sensorial</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/degustacao#cupping"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Cupping</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/degustacao#notas"
-                  className="flex items-center justify-between text-sm text-muted-foreground hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
+                  className="flex items-center justify-between text-sm text-black dark:text-white hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors group"
                 >
                   <span>Identificação de Notas</span>
                   <ArrowRight className="h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
