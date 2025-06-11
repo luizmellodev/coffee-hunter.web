@@ -20,13 +20,12 @@ export default function SobrePage() {
               <h2 className="text-3xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6">Minha História</h2>
               <div className="space-y-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
                 <p>
-                  E aí! Sou o Luiz, um dev iOS que decidiu se aventurar no mundo do desenvolvimento web. Apaixonado por
-                  café, estou atualmente tentando aprender latte art (com muitas tentativas frustradas, mas
-                  persistindo!).
+                  E aí! Sou o Luiz, um desenvolvedor iOS que decidiu se aventurar no mundo do café! Estou atualmente tentando aprender latte art (com muitas tentativas frustradas, mas
+                  persistindo hehe).
                 </p>
                 <p>
                   Sempre senti falta de ter um material completo e bem organizado sobre cafés especiais em português.
-                  Então resolvi criar este site como um projeto pessoal, juntando conhecimentos de vários artigos,
+                  E ao invés de só aceitar que não existe.. resolvi criar este site como um projeto pessoal, juntando conhecimentos de vários artigos,
                   canais no YouTube, perfis no Instagram e muitas conversas com especialistas.
                 </p>
                 <p>
@@ -38,11 +37,11 @@ export default function SobrePage() {
             <div className="relative">
               <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-[#C38154]/30 rounded-full blur-3xl opacity-40" />
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/me.jpg"
                 width={500}
                 height={400}
                 alt="Desenvolvedor trabalhando com café"
-                className="rounded-2xl shadow-lg"
+                className="rounded-2xl shadow-lg object-cover w-22 h-22"
               />
             </div>
           </div>
@@ -104,6 +103,15 @@ export default function SobrePage() {
               Tem alguma sugestão, correção ou apenas quer bater um papo sobre café? Ficarei feliz em ouvir de você!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                asChild
+                variant="outline"
+                className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
+              >
+                <Link href="https://luizmello.dev" target="_blank" rel="noopener noreferrer">
+                  Meu Site
+                </Link>
+              </Button>
               <Button
                 asChild
                 className="bg-white text-[#884A39] hover:bg-[#F9E0BB] dark:hover:bg-[#F9E0BB]/80 px-8 py-6 rounded-full"
@@ -123,6 +131,7 @@ export default function SobrePage() {
                   Email
                 </Link>
               </Button>
+
             </div>
           </div>
         </div>
