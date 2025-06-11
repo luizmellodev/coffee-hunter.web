@@ -57,7 +57,7 @@ export default function SobrePage() {
 
               <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
-                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">João - Williams and Sons</h4>
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">João - William and Sons</h4>
                   <p className="text-sm">
                     Pelas conversas inspiradoras e pelo conhecimento compartilhado sobre o mundo dos cafés especiais (e pelo nome Coffee Hunter!).
                   </p>
