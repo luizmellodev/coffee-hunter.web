@@ -527,14 +527,6 @@ export default function CafeESaude() {
                     do seu corpo. Se você tem alguma condição de saúde específica, consulte seu médico antes de fazer
                     alterações no seu consumo de café.
                   </p>
-                  <div className="mt-8">
-                    <Link href="/receitas">
-                      <Button className="bg-[#C38154] hover:bg-[#884A39] text-white">
-                        Explorar Receitas
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </div>
                 </div>
               </div>
               <div className="relative">
