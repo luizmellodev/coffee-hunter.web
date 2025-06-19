@@ -1,12 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Coffee, Settings, Droplets, Scale, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Coffee, Settings, Droplets, Scale, Clock } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 
 export default function EquipamentosPage() {
   return (
     <div className="min-h-screen">
+      <div className="bg-gradient-to-r from-coffee-700 to-coffee-800 dark:from-coffee-800 dark:to-coffee-900 text-white sticky top-14 md:top-16 z-20">
+        <div className="container py-3">
+          <div className="flex items-center justify-center gap-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full">
+              <Clock className="h-4 w-4" />
+              <span className="text-sm font-medium">Em Breve!</span>
+            </div>
+            <p className="text-sm text-white/90">Recomendações de marcas/modelos de equipamentos para você</p>
+          </div>
+        </div>
+      </div>
+
       <PageHeader
         title="Guia de Equipamentos para Café"
         description="Conheça os equipamentos essenciais para preparar café especial em casa, desde máquinas de espresso até métodos manuais."
