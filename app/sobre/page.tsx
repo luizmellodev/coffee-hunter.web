@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import { Heart, Mail, Instagram } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
@@ -9,69 +10,127 @@ export default function SobrePage() {
     <div className="min-h-screen">
       <PageHeader
         title="Sobre o Coffee Hunter"
-        description="Um pouco sobre mim e a jornada de criação deste site."
+        description="A história e o propósito por trás deste projeto."
         icon={<Heart className="h-8 w-8 text-[#C38154]" />}
       />
 
       <section className="py-12 md:py-16">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6">Minha História</h2>
+          <div className="grid lg:grid-cols-5 gap-12 items-start mb-16">
+            <div className="lg:col-span-3">
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-6">O Projeto</h2>
               <div className="space-y-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
                 <p>
-                  E aí! Sou o Luiz, um desenvolvedor iOS que decidiu se aventurar no mundo do café! Estou atualmente tentando aprender latte art (com muitas tentativas frustradas, mas
-                  persistindo hehe).
+                  O Coffee Hunter nasceu da necessidade de ter um material completo e bem organizado sobre cafés especiais em português.
+                  A ideia é reunir conhecimentos de diversas fontes - artigos, canais no YouTube, perfis no Instagram e conversas com especialistas - em um único lugar,
+                  de forma clara e acessível.
                 </p>
                 <p>
-                  Sempre senti falta de ter um material completo e bem organizado sobre cafés especiais em português.
-                  E ao invés de só aceitar que não existe.. resolvi criar este site como um projeto pessoal, juntando conhecimentos de vários artigos,
-                  canais no YouTube, perfis no Instagram e muitas conversas com especialistas.
+                  Este projeto é uma forma de organizar e compartilhar conhecimento com outros entusiastas. Não é um site comercial,
+                  mas sim um espaço dedicado a quem quer aprender mais sobre o fascinante mundo do café especial.
                 </p>
-                <p>
-                  Este projeto é uma forma de organizar o que aprendi e compartilhar com outros entusiastas. Não sou um
-                  especialista, apenas alguém que ama café e quer aprender mais sobre esse universo fascinante.
-                </p>
+                <div className="flex items-center gap-4 pt-4">
+                  <div className="relative w-16 h-16 flex-shrink-0">
+                    <Image
+                      src="/me.jpg"
+                      fill
+                      alt="Luiz Mello"
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm">
+                      Oi! Sou o Luiz, desenvolvedor iOS e entusiasta de café. Criei este site como um projeto pessoal para ajudar
+                      outros amantes de café a encontrarem informações confiáveis em português. Atualmente estou tentando aprender
+                      latte art (com muitas tentativas frustradas, mas persistindo!).
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute -z-10 inset-0 bg-[#F9E0BB] dark:bg-[#C38154]/30 rounded-full blur-3xl opacity-40" />
-              <Image
-                src="/me.jpg"
-                width={500}
-                height={400}
-                alt="Desenvolvedor trabalhando com café"
-                className="rounded-2xl shadow-lg object-cover w-22 h-22"
-              />
+            <div className="lg:col-span-2">
+              <div className="bg-[#F9E0BB]/30 dark:bg-gray-800 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-4">Objetivos do Site</h3>
+                <ul className="space-y-3 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-[#884A39] dark:bg-[#F9E0BB] rounded-full mt-2" />
+                    <span>Fornecer informações confiáveis sobre café especial em português</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-[#884A39] dark:bg-[#F9E0BB] rounded-full mt-2" />
+                    <span>Explicar conceitos complexos de forma clara e acessível</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-[#884A39] dark:bg-[#F9E0BB] rounded-full mt-2" />
+                    <span>Ajudar consumidores a entenderem melhor o que estão comprando</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-[#884A39] dark:bg-[#F9E0BB] rounded-full mt-2" />
+                    <span>Contribuir para a disseminação da cultura do café especial no Brasil</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md mb-16">
-            <h3 className="text-2xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-8 text-center">Agradecimentos</h3>
+            <h3 className="text-2xl font-bold text-[#884A39] dark:text-[#F9E0BB] mb-8 text-center">Agradecimentos Especiais</h3>
 
-            <div className="space-y-6 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
+            <div className="space-y-8 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
               <p className="text-center max-w-3xl mx-auto">
-                Este site não seria possível sem a ajuda e conhecimento compartilhado por muitas pessoas. Gostaria de
-                agradecer especialmente:
+                Este site não seria possível sem a ajuda e conhecimento compartilhado por pessoas especiais que cruzaram meu caminho.
+                Além de me ensinarem sobre café, me mostraram como a paixão pelo que fazemos pode transformar vidas.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
-                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">João - William and Sons</h4>
-                  <p className="text-sm">
-                    Pelas conversas inspiradoras e pelo conhecimento compartilhado sobre o mundo dos cafés especiais (e pelo nome Coffee Hunter!).
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">João - William and Sons</h4>
+                  <p className="text-sm mb-4">
+                    Por me introduzir ao mundo do café especial, pela amizade e conversas sobre o café e a vida.
                   </p>
+                  <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
+                    <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">William and Sons</h5>
+                    <p className="text-xs">
+                    Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Trabalha com cafés especiais, incluindo microlotes. Tem u   melhores pão de queijo que já experimentei.
+                    </p>
+                    <a 
+                      href="https://instagram.com/williamsonscoffee" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#884A39] dark:text-[#F9E0BB] mt-2 hover:underline"
+                    >
+                      <Instagram className="h-3 w-3" />
+                      @williamsonscoffee
+                    </a>
+                  </div>
                 </div>
 
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
-                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-2">Cássio - Café ao Quadrado</h4>
-                  <p className="text-sm">Pelos insights valiosos e pela paixão contagiante pelo café de qualidade.</p>
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">Cássio - Café ao Quadrado</h4>
+                  <p className="text-sm mb-4">
+                    Pelas incontáveis aulas sobre café especial, pela grande amizade, conversas, carinho e pela paixão contagiante sobre cafés!
+                  </p>
+                  <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
+                    <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">Café ao Quadrado</h5>
+                    <p className="text-xs">
+                    A primeira cafeteria do litoral gaúcho,localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
+                    </p>
+                    <a 
+                      href="https://instagram.com/cafeao2" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#884A39] dark:text-[#F9E0BB] mt-2 hover:underline"
+                    >
+                      <Instagram className="h-3 w-3" />
+                      @cafeao2
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <p className="text-center max-w-3xl mx-auto mt-6">
-                E a todos os baristas, produtores, torrefadores e entusiastas que compartilham seu conhecimento online e
-                pessoalmente.
+              <p className="text-center max-w-3xl mx-auto mt-8">
+                E a todos os baristas, produtores, torrefadores e entusiastas que compartilham seu conhecimento e paixão,
+                contribuindo para um mundo do café mais rico e acessível.
               </p>
             </div>
           </div>
