@@ -30,6 +30,12 @@ export function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-56 glass-effect rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
               <Link
+                href="/historia-do-cafe"
+                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+              >
+                História do Café
+              </Link>
+              <Link
                 href="/cafe-especial"
                 className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
               >
@@ -46,6 +52,12 @@ export function Header() {
                 className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
               >
                 Terroir
+              </Link>
+              <Link
+                href="/cafe-e-saude"
+                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+              >
+                Café e Saúde
               </Link>
             </div>
           </div>
@@ -79,8 +91,21 @@ export function Header() {
               >
                 Armazenamento
               </Link>
+              <Link
+                href="/agua-e-extracao"
+                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+              >
+                Água e Extração
+              </Link>
             </div>
           </div>
+
+          <Link
+            href="/equipamentos"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+          >
+            Equipamentos
+          </Link>
 
           <div className="relative group">
             <Link
@@ -142,6 +167,20 @@ export function Header() {
           >
             Degustação
           </Link>
+
+          <Link
+            href="/guia-para-iniciantes"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+          >
+            Guia Iniciante
+          </Link>
+
+          <Link
+            href="/sobre"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+          >
+            Sobre
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
@@ -179,6 +218,13 @@ export function Header() {
               </h3>
               <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
                 <Link
+                  href="/historia-do-cafe"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  História do Café
+                </Link>
+                <Link
                   href="/cafe-especial"
                   className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
@@ -198,6 +244,13 @@ export function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Terroir
+                </Link>
+                <Link
+                  href="/cafe-e-saude"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Café e Saúde
                 </Link>
               </div>
             </div>
@@ -227,6 +280,48 @@ export function Header() {
                 >
                   Torra
                 </Link>
+                <Link
+                  href="/armazenamento"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Armazenamento
+                </Link>
+                <Link
+                  href="/agua-e-extracao"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Água e Extração
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
+                Equipamentos
+              </h3>
+              <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
+                <Link
+                  href="/equipamentos/moedores"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Moedores
+                </Link>
+                <Link
+                  href="/equipamentos/cafeteiras"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Cafeteiras
+                </Link>
+                <Link
+                  href="/equipamentos/acessorios"
+                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Acessórios
+                </Link>
               </div>
             </div>
             <div>
@@ -255,22 +350,21 @@ export function Header() {
                 >
                   AeroPress
                 </Link>
-                                <Link
+                <Link
                   href="/metodos/chemex"
                   className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Chemex
                 </Link>
-                                                <Link
+                <Link
                   href="/metodos/french-press"
                   className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Prensa Francesa
                 </Link>
-
-                                                                <Link
+                <Link
                   href="/metodos/moka"
                   className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
@@ -278,25 +372,25 @@ export function Header() {
                   Moka
                 </Link>
               </div>
-                                              <Link
-                  href="/latte-art"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors pt-4"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Latte Art
-              </h3>
-                </Link>
+              <Link
+                href="/guia-para-iniciantes"
+                className="block text-sm text-foreground/80 hover:text-foreground transition-colors pt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
+                  Guia para Iniciantes
+                </h3>
+              </Link>
 
-                                                <Link
-                  href="/degustacao"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Degustação
-              </h3>
-                </Link>
+              <Link
+                href="/sobre"
+                className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
+                  Sobre
+                </h3>
+              </Link>
             </div>
             <Button
               asChild
