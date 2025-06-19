@@ -4,17 +4,12 @@ import {
   Coffee,
   Sparkles,
   BookOpen,
-  Users,
-  Award,
   ArrowRight,
   Droplets,
   Heart,
-  AlertTriangle,
-  Trophy,
   Calendar,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { InfoCard } from "@/components/info-card";
 import LottieAnimation from "@/components/LottieAnimation";
 
 export default function Home() {
@@ -65,9 +60,9 @@ export default function Home() {
                     size="lg"
                     className="glass-effect border-0 rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg group hover:bg-accent/50"
                   >
-                    <Link href="/metodos/">
+                    <Link href="/guia-para-iniciantes/">
                       <Coffee className="mr-2 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
-                      Ver Métodos
+                      Guia para iniciantes
                       <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
