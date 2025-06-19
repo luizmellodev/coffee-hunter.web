@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Award, TrendingUp, Globe, Users } from "lucide-react"
+import { Award, TrendingUp, Globe, Users, Star, Coffee, Flame, ArrowUpCircle, Info } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InfoCard } from "@/components/info-card"
 import Link from "next/link";
@@ -18,7 +18,7 @@ export default function CafeEspecialPage() {
 
       <section className="py-12 md:py-16">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
                 Definição e Características
@@ -52,7 +52,7 @@ export default function CafeEspecialPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
             <InfoCard
               title="Pontuação SCA"
               description="Avaliação rigorosa que considera 10 critérios sensoriais, com pontuação mínima de 80 pontos."
@@ -75,54 +75,167 @@ export default function CafeEspecialPage() {
             />
           </div>
 
-          <div className="section-card p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">Escala de Pontuação SCA</h3>
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <div>
-                <h4 className="font-bold text-foreground mb-3 md:mb-4 text-sm md:text-base">Critérios de Avaliação:</h4>
-                <div className="space-y-2 md:space-y-3">
-                  {[
-                    { criteria: "Aroma", points: "10 pontos" },
-                    { criteria: "Sabor", points: "15 pontos" },
-                    { criteria: "Acidez", points: "15 pontos" },
-                    { criteria: "Corpo", points: "15 pontos" },
-                    { criteria: "Equilíbrio", points: "15 pontos" },
-                    { criteria: "Finalização", points: "10 pontos" },
-                    { criteria: "Doçura", points: "10 pontos" },
-                    { criteria: "Uniformidade", points: "10 pontos" },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex justify-between items-center p-2 md:p-3 info-box rounded text-sm md:text-base"
-                    >
-                      <span className="text-foreground">{item.criteria}</span>
-                      <span className="font-medium text-coffee-600 dark:text-coffee-400">{item.points}</span>
+          <div className="space-y-16">
+            <div>
+              <p className="text-foreground text-lg leading-relaxed">
+                No Brasil, temos um sistema duplo de classificação de cafés. A ABIC é responsável por avaliar e certificar os cafés comerciais que encontramos no mercado, usando uma escala de 0 a 10. Por outro lado, os cafés especiais são avaliados pela BSCA e SCA, que utilizam uma metodologia mais rigorosa com pontuação de 0 a 100.
+              </p>
+            </div>
+
+            {/* Categorias de Café Comercial */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Categorias de Café Comercial no Brasil</h3>
+              <div className="space-y-8">
+                <div className="bg-coffee-50/50 dark:bg-coffee-900/30 p-6 rounded-lg">
+                  <p className="text-sm text-coffee-800 dark:text-coffee-200">
+                    <strong>Importante:</strong> As categorias abaixo se referem apenas aos cafés comerciais. Mesmo o café Gourmet, que é a melhor categoria comercial, ainda está abaixo dos padrões exigidos para um café especial (que precisa ter mais de 80 pontos na escala SCA).
+                  </p>
+                </div>
+                <p className="text-foreground text-lg">
+                  A ABIC classifica os cafés comerciais em quatro categorias principais, em ordem decrescente de qualidade:
+                </p>
+                <div className="grid gap-8">
+                  <div className="p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+                        <Award className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">Gourmet</h4>
+                        <p className="text-sm text-muted-foreground/80 mt-1">Melhor Categoria Comercial</p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          Mistura pura de grãos arábica de alta qualidade, sem defeitos. Colheita seletiva, processamento cuidadoso e torra controlada. É o melhor entre os cafés comerciais, mas ainda não atinge a complexidade e os critérios rigorosos dos cafés especiais.
+                        </p>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+                        <Star className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">Superior</h4>
+                        <p className="text-sm text-muted-foreground/80 mt-1">Qualidade Intermediária</p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          Grãos mais refinados, com até 10% de defeitos permitidos. Blend de arábica com pequena porcentagem de conilon. Sabor e aroma mais pronunciados que o tradicional.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+                        <Coffee className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">Tradicional</h4>
+                        <p className="text-sm text-muted-foreground/80 mt-1">Qualidade Básica</p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          Mistura de grãos arábica e conilon sem seleção específica. Colheita não seletiva, incluindo grãos verdes e maduros. Maior tolerância a defeitos.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+                        <Flame className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">Extraforte</h4>
+                        <p className="text-sm text-muted-foreground/80 mt-1">Torra Muito Escura</p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          Torra muito escura, quase carbonizada. Geralmente contém maior quantidade de impurezas e defeitos, que são mascarados pela torra intensa. Sabor mais amargo e intenso.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold text-foreground mb-3 md:mb-4 text-sm md:text-base">
-                  Classificação por Pontos:
-                </h4>
-                <div className="space-y-2 md:space-y-3">
-                  <div className="p-3 md:p-4 bg-green-100 dark:bg-green-900/30 border-l-4 border-green-500 rounded text-sm md:text-base">
-                    <div className="font-bold text-green-800 dark:text-green-300">90-100 pontos</div>
-                    <div className="text-green-700 dark:text-green-400">Excepcional - Cafés raros e únicos</div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 rounded text-sm md:text-base">
-                    <div className="font-bold text-blue-800 dark:text-blue-300">85-89 pontos</div>
-                    <div className="text-blue-700 dark:text-blue-400">Excelente - Cafés premium</div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 rounded text-sm md:text-base">
-                    <div className="font-bold text-yellow-800 dark:text-yellow-300">80-84 pontos</div>
-                    <div className="text-yellow-700 dark:text-yellow-400">Muito Bom - Cafés especiais</div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-gray-100 dark:bg-gray-700 border-l-4 border-gray-400 dark:border-gray-500 rounded text-sm md:text-base">
-                    <div className="font-bold text-gray-700 dark:text-gray-300">Abaixo de 80</div>
-                    <div className="text-gray-600 dark:text-gray-400">Café comercial/commodity</div>
+            </div>
+
+            <div>
+              <div className="flex items-start gap-6">
+                <div className="bg-coffee-100 dark:bg-coffee-900 p-3 rounded-lg flex-shrink-0">
+                  <ArrowUpCircle className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                </div>
+                <p className="text-foreground text-lg leading-relaxed">
+                  Enquanto a ABIC classifica os cafés comerciais, a SCA estabelece padrões internacionais para cafés especiais. A BSCA adota esses padrões e trabalha para promover os cafés especiais brasileiros no mercado global. Para um café ser considerado especial, ele precisa atingir no mínimo 80 pontos na escala SCA, o que exige um nível de qualidade e cuidado muito superior ao encontrado mesmo nos melhores cafés comerciais.
+                </p>
+              </div>
+            </div>
+
+            {/* Escala de Pontuação SCA */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Escala de Pontuação SCA</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <p className="text-muted-foreground mb-6">
+                    A metodologia SCA é considerada o padrão ouro na avaliação de cafés especiais. Cada café é avaliado por Q-Graders (provadores certificados) que analisam diversos aspectos da bebida:
+                  </p>
+                  <div className="space-y-2 md:space-y-3">
+                    {[
+                      { criteria: "Aroma/Fragrância", description: "Intensidade e qualidade do cheiro", points: "10 pontos" },
+                      { criteria: "Sabor", description: "Características na xícara", points: "15 pontos" },
+                      { criteria: "Doçura", description: "Presença de açúcares naturais", points: "10 pontos" },
+                      { criteria: "Acidez", description: "Vivacidade e notas frutadas", points: "15 pontos" },
+                      { criteria: "Corpo", description: "Textura e densidade na boca", points: "15 pontos" },
+                      { criteria: "Finalização", description: "Sabor que permanece após beber", points: "15 pontos" },
+                      { criteria: "Equilíbrio", description: "Harmonia entre os elementos", points: "10 pontos" },
+                      { criteria: "Defeitos", description: "Ausência de sabores ruins", points: "10 pontos" },
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col p-2 md:p-3 info-box rounded text-sm md:text-base"
+                      >
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-foreground">{item.criteria}</span>
+                          <span className="text-coffee-600 dark:text-coffee-400 text-sm">{item.points}</span>
+                        </div>
+                        <span className="text-muted-foreground text-sm">{item.description}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
+                <div>
+                  <div className="space-y-3 md:space-y-4">
+                    <div className="p-4 md:p-5 bg-violet-100 dark:bg-violet-900/30 border-l-4 border-violet-500 rounded-lg">
+                      <div className="font-bold text-violet-800 dark:text-violet-300 text-lg">Extraordinário</div>
+                      <div className="text-violet-700 dark:text-violet-400">90+ pontos</div>
+                      <div className="mt-2 text-sm text-violet-600 dark:text-violet-300">
+                        Raridades premiadas no Cup of Excellence. São os melhores cafés do mundo, com características únicas e excepcionais.
+                      </div>
+                    </div>
+                    <div className="p-4 md:p-5 bg-green-100 dark:bg-green-900/30 border-l-4 border-green-500 rounded-lg">
+                      <div className="font-bold text-green-800 dark:text-green-300 text-lg">Especial</div>
+                      <div className="text-green-700 dark:text-green-400">80-89 pontos</div>
+                      <div className="mt-2 text-sm text-green-600 dark:text-green-300">
+                        Grãos maduros cuidadosamente selecionados. Alta qualidade, complexidade sensorial e características distintivas.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-950/50 rounded-lg">
+                    <p className="text-sm text-amber-800 dark:text-amber-200">
+                      <strong>Você sabia?</strong> O café mais bem pontuado do mundo é brasileiro! 
+                      A Fazenda Santa Inês, em Carmo de Minas, alcançou 95.85 pontos em 2005, um recorde histórico que permanece até hoje.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-start gap-6">
+                <div className="bg-coffee-100 dark:bg-coffee-900 p-3 rounded-lg flex-shrink-0">
+                  <Info className="h-6 w-6 text-coffee-600 dark:text-coffee-400" />
+                </div>
+                <p className="text-foreground text-lg leading-relaxed">
+                  É importante notar que mesmo dentro da categoria de cafés especiais, há uma grande variação de qualidade e características. Um café de 82 pontos já é considerado especial, mas um café de 90+ pontos representa o ápice da qualidade, geralmente premiado em competições internacionais e altamente valorizado no mercado.
+                </p>
               </div>
             </div>
           </div>
@@ -132,7 +245,7 @@ export default function CafeEspecialPage() {
       <section className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
-            Diferenças entre Café Especial e Commodity
+            Diferenças entre Café Especial e Comum
           </h2>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             <div className="process-card p-4 md:p-6">
@@ -152,7 +265,7 @@ export default function CafeEspecialPage() {
             </div>
             <div className="process-card p-4 md:p-6">
               <h3 className="text-lg md:text-xl font-bold text-gray-600 dark:text-gray-400 mb-3 md:mb-4">
-                ☕ Café Commodity
+                ☕ Café Comum
               </h3>
               <ul className="space-y-1 md:space-y-2 text-muted-foreground text-sm md:text-base">
                 <li>• Pontuação abaixo de 80 pontos</li>
