@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
-import { ArrowRight, Check, Coffee, Sparkles, BookOpen } from "lucide-react"
+import { ArrowRight, BookOpen, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ContentDisclaimer } from "@/components/content-disclaimer"
 
 export default function GuiaParaIniciantes() {
   return (
@@ -14,6 +15,10 @@ export default function GuiaParaIniciantes() {
       />
 
       <main className="container px-4 md:px-6 py-10 md:py-12 lg:py-16">
+        <div className="max-w-5xl mx-auto mb-16">
+          <ContentDisclaimer />
+        </div>
+
         {/* Introdução */}
         <section className="py-16">
           <div className="container max-w-5xl">
@@ -273,6 +278,23 @@ export default function GuiaParaIniciantes() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Anúncio de E-books */}
+        <section className="py-16 bg-gradient-to-r from-coffee-700 to-coffee-800 dark:from-coffee-800 dark:to-coffee-900 text-white">
+          <div className="container max-w-5xl text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 mb-6">
+              <Clock className="h-4 w-4" />
+              <span className="text-sm font-medium">Em Breve</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+              E-books Completos Sobre Café Especial
+            </h2>
+            <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+              Estamos preparando guias detalhados que vão te levar do básico ao avançado no mundo do café especial. 
+              Receitas, técnicas profissionais, segredos dos baristas e muito mais =)
+            </p>
           </div>
         </section>
       </main>
