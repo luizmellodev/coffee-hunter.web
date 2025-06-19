@@ -20,9 +20,7 @@ export default function VariedadesPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">Diversidade Genética</h2>
               <div className="space-y-3 md:space-y-4 text-muted-foreground text-sm md:text-base">
                 <p>
-                  Existem mais de 100 espécies de café no mundo, mas apenas duas são comercialmente relevantes: Coffea
-                  arabica (75% da produção mundial) e Coffea canephora (robusta, 25%). Dentro da espécie arabica,
-                  encontramos centenas de variedades, cada uma com características únicas.
+                Existem mais de 100 espécies de café no mundo, mas apenas duas são comercialmente relevantes: Coffea arabica (aproximadamente 60–70% da produção mundial) e Coffea canephora (robusta, cerca de 30–40%). Dentro da espécie arábica, encontramos centenas de variedades, cada uma com características únicas.
                 </p>
                 <p>
                   As variedades de café são resultado de seleção natural, mutações espontâneas e melhoramento genético.
