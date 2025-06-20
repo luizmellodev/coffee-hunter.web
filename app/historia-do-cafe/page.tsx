@@ -12,52 +12,58 @@ export default function HistoriaDoCafe() {
   const timelineItems = [
     {
       year: "850 d.C.",
-      title: "Lenda de Kaldi",
+      title: "Lenda de Kaldi e as Origens",
       description:
-        "Um pastor etíope descobre o efeito energizante do café ao observar suas cabras mais animadas após comerem os frutos vermelhos.",
+        "A lenda conta que Kaldi, um pastor etíope, descobriu o café após notar suas cabras mais energéticas ao comerem os frutos. Ele levou os frutos a um monastério local, onde os monges acidentalmente torraram os grãos ao jogá-los no fogo, criando um aroma irresistível. Na realidade histórica, tribos etíopes já mastigavam os frutos do café e faziam infusões com suas folhas muito antes desta data, usando-o em rituais religiosos e como fonte de energia.",
       image: "/kaldi.jpg",
     },
     {
       year: "1000 d.C.",
-      title: "Primeiros Cultivos",
-      description: "Árabes começam a cultivar café no Iêmen e desenvolvem o processo de torrefação.",
+      title: "O Café no Mundo Árabe",
+      description:
+        "Os árabes foram os primeiros a cultivar sistematicamente o café no Iêmen, região de Mocha. Eles desenvolveram técnicas sofisticadas de cultivo e foram pioneiros na arte da torrefação. O café era conhecido como 'qahwa', que originalmente significava 'vinho' em árabe, mas passou a designar a bebida que conhecemos hoje. Os árabes mantiveram um monopólio rigoroso sobre o cultivo, proibindo a exportação de grãos férteis e permitindo apenas a saída de grãos torrados para proteger seu mercado.",
       image: "iemen.jpg",
     },
     {
       year: "1500",
-      title: "Primeiras Cafeterias",
-      description: "Surgem as primeiras cafeterias em Meca, Cairo e Constantinopla.",
+      title: "A Era das Primeiras Cafeterias",
+      description:
+        "As primeiras cafeterias, conhecidas como 'qahveh khaneh', surgiram em Meca, Cairo e Constantinopla. Estas casas se tornaram centros de atividade social, conhecidas como 'Escolas de Sabedoria' por serem locais de discussão intelectual, música e jogos. Em Constantinopla, se uma mulher considerasse que seu marido não estava provendo café suficiente, isso era motivo legal para divórcio. O café era tão importante que os estabelecimentos precisavam de uma licença especial do governo otomano para funcionar.",
       image: "meca.jpeg",
     },
     {
       year: "1600",
-      title: "Chegada à Europa",
-      description: "O café chega à Itália e se espalha rapidamente pela Europa, criando uma revolução cultural.",
+      title: "Revolução Europeia do Café",
+      description:
+        "O café chegou à Europa através de Veneza, principal porto comercial com o Oriente. Inicialmente enfrentou resistência religiosa, até o Papa Clemente VIII provar e abençoar a bebida em 1615. Em Londres, a primeira cafeteria foi aberta por um grego chamado Pasqua Rosée em 1652, na Rua St. Michael. Em Viena, após os turcos serem derrotados em 1683, sacos de café abandonados foram usados para criar a primeira cafeteria vienense, onde o café com leite e os croissants foram inventados. As cafeterias se tornaram conhecidas como 'Penny Universities', pois por um penny qualquer pessoa podia tomar café e participar de debates intelectuais.",
       image: "europe.jpg",
     },
     {
       year: "1727",
-      title: "Café no Brasil",
+      title: "A Saga do Café no Brasil",
       description:
-        "Francisco de Melo Palheta traz as primeiras mudas de café para o Brasil, que se tornaria o maior produtor mundial.",
+        "Francisco de Melo Palheta foi enviado à Guiana Francesa com a missão secreta de obter sementes de café. Segundo a história, ele conquistou a esposa do governador francês, que lhe presenteou com mudas escondidas em um buquê de flores. A partir dessas mudas, o Brasil desenvolveu a maior indústria cafeeira do mundo. O café foi primeiro plantado no Pará, depois se expandiu para o Maranhão, Rio de Janeiro e finalmente São Paulo e Minas Gerais. O ciclo do café transformou completamente a economia brasileira, financiando a industrialização e a modernização do país.",
       image: "brazil.jpg",
     },
     {
       year: "1900",
-      title: "Industrialização",
-      description: "Desenvolvimento de métodos de produção em massa e café solúvel, democratizando o consumo.",
+      title: "Era da Industrialização",
+      description:
+        "O século XX trouxe inovações revolucionárias para o café. Em 1901, o italiano Luigi Bezzera patenteou a primeira máquina de café espresso comercial. Em 1938, o brasileiro Max Morgenthaler, trabalhando para a Nestlé, desenvolveu o primeiro café solúvel viável comercialmente após sete anos de pesquisa. A indústria do café se modernizou com novos métodos de processamento, embalagem a vácuo (introduzida em 1900 por Hills Brothers) e técnicas de conservação. Em 1971, a primeira loja Starbucks foi aberta em Seattle, marcando o início de uma nova era na comercialização do café.",
       image: "industrialization.jpg",
     },
     {
       year: "1970",
       title: "Revolução do Espresso",
-      description: "Popularização das máquinas de espresso e surgimento de grandes redes de cafeterias.",
+      description:
+        "A década de 1970 marcou o início da revolução moderna do espresso. Ernesto Illy desenvolveu o sistema de embalagem pressurizada para preservar grãos de café. A Rancilio e outras empresas italianas aperfeiçoaram as máquinas de espresso com controle de temperatura e pressão mais precisos. Howard Schultz, inspirado pelas cafeterias italianas, transformou a Starbucks em uma rede global, popularizando termos como 'barista' e 'latte'. O café italiano se tornou um fenômeno global, com consumidores aprendendo a apreciar diferentes métodos de extração e origens dos grãos.",
       image: "espresso.jpg",
     },
     {
       year: "2000",
-      title: "Terceira Onda",
-      description: "Movimento focado na qualidade, origem única e métodos artesanais de preparo.",
+      title: "A Terceira Onda do Café",
+      description:
+        "A Terceira Onda do café trouxe uma abordagem artesanal e científica à bebida. Surgem métodos precisos de preparo como V60, Chemex e AeroPress. Torrefadores passam a trabalhar diretamente com produtores, criando relações diretas de comércio e pagando preços premium por grãos de alta qualidade. A indústria desenvolve padrões rigorosos de classificação, com competições mundiais de baristas e sistemas de pontuação para cafés especiais. Consumidores passam a se interessar pela origem, variedade, altitude de cultivo e métodos de processamento, tratando o café como uma bebida tão complexa quanto o vinho.",
       image: "specialcoffee2.jpeg",
     },
   ]

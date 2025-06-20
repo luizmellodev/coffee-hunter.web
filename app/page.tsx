@@ -222,6 +222,20 @@ export default function Home() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
+            <Link
+              href="/eventos-de-cafe"
+              className="group relative overflow-hidden rounded-lg border bg-background p-6 hover:border-coffee-500 dark:hover:border-coffee-700 transition-colors"
+            >
+              <div className="flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <h3 className="font-serif text-xl font-bold">Eventos de Café no Brasil</h3>
+                  <p className="text-muted-foreground">
+                    Conheça os principais eventos e campeonatos de café no Brasil.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
