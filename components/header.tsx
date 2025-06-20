@@ -5,6 +5,9 @@ import { useState } from "react";
 import { CoffeeIcon, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { MenuLink } from "@/components/navigation/menu-link";
+import { MenuSection } from "@/components/navigation/menu-section";
+import { MenuItem } from "@/components/navigation/menu-item";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,163 +27,37 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-          <div className="relative group">
-            <button className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2">
-              Fundamentos
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-56 glass-effect rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
-              <Link
-                href="/historia-do-cafe"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                História do Café
-              </Link>
-              <Link
-                href="/cafe-especial"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                O que é Café Especial
-              </Link>
-              <Link
-                href="/variedades"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Variedades
-              </Link>
-              <Link
-                href="/terroir"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Terroir
-              </Link>
-              <Link
-                href="/cafe-e-saude"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Café e Saúde
-              </Link>
-            </div>
-          </div>
+          <MenuSection title="Fundamentos">
+            <MenuItem href="/historia-do-cafe">História do Café</MenuItem>
+            <MenuItem href="/cafe-especial">O que é Café Especial</MenuItem>
+            <MenuItem href="/variedades">Variedades</MenuItem>
+            <MenuItem href="/terroir">Terroir</MenuItem>
+            <MenuItem href="/cafe-e-saude">Café e Saúde</MenuItem>
+          </MenuSection>
 
-          <div className="relative group">
-            <button className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2">
-              Produção
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-56 glass-effect rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
-              <Link
-                href="/colheita"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Colheita
-              </Link>
-              <Link
-                href="/processamento"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Processamento
-              </Link>
-              <Link
-                href="/torra"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Torra
-              </Link>
-              <Link
-                href="/armazenamento"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Armazenamento
-              </Link>
-              <Link
-                href="/agua-e-extracao"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Água e Extração
-              </Link>
-            </div>
-          </div>
+          <MenuSection title="Produção">
+            <MenuItem href="/colheita">Colheita</MenuItem>
+            <MenuItem href="/processamento">Processamento</MenuItem>
+            <MenuItem href="/torra">Torra</MenuItem>
+            <MenuItem href="/armazenamento">Armazenamento</MenuItem>
+            <MenuItem href="/agua-e-extracao">Água e Extração</MenuItem>
+          </MenuSection>
 
-          <Link
-            href="/equipamentos"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Equipamentos
-          </Link>
+          <MenuLink href="/equipamentos">Equipamentos</MenuLink>
 
-          <div className="relative group">
-            <Link
-              href="/metodos"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
-            >
-              Métodos
-            </Link>
-            <div className="absolute top-full left-0 mt-2 w-56 glass-effect rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
-              <Link
-                href="/metodos/espresso"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Espresso
-              </Link>
-              <Link
-                href="/metodos/v60"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Hario V60
-              </Link>
-              <Link
-                href="/metodos/aeropress"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                AeroPress
-              </Link>
-              <Link
-                href="/metodos/chemex"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Chemex
-              </Link>
-              <Link
-                href="/metodos/french-press"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                French Press
-              </Link>
-              <Link
-                href="/metodos/moka"
-                className="block px-4 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-              >
-                Moka
-              </Link>
-            </div>
-          </div>
+          <MenuSection title="Métodos" href="/metodos">
+            <MenuItem href="/metodos/espresso">Espresso</MenuItem>
+            <MenuItem href="/metodos/v60">Hario V60</MenuItem>
+            <MenuItem href="/metodos/aeropress">AeroPress</MenuItem>
+            <MenuItem href="/metodos/chemex">Chemex</MenuItem>
+            <MenuItem href="/metodos/french-press">Prensa Francesa</MenuItem>
+            <MenuItem href="/metodos/moka">Moka</MenuItem>
+          </MenuSection>
 
-          <Link
-            href="/latte-art"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Latte Art
-          </Link>
-
-          <Link
-            href="/degustacao"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Degustação
-          </Link>
-
-          <Link
-            href="/guia-para-iniciantes"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Guia Iniciante
-          </Link>
-
-          <Link
-            href="/sobre"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Sobre
-          </Link>
+          <MenuLink href="/latte-art">Latte Art</MenuLink>
+          <MenuLink href="/degustacao">Degustação</MenuLink>
+          <MenuLink href="/guia-para-iniciantes">Guia Iniciante</MenuLink>
+          <MenuLink href="/sobre">Sobre</MenuLink>
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
@@ -211,194 +88,97 @@ export function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden glass-effect border-t">
-          <div className="container py-4 md:py-6 space-y-4 md:space-y-6">
-            <div>
-              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Fundamentos
-              </h3>
-              <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
-                <Link
-                  href="/historia-do-cafe"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+          <div className="container py-3">
+            <nav className="space-y-0 max-h-[70vh] overflow-y-auto scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent pr-2 -mr-2">
+              {/* Fundamentos */}
+              <MenuSection title="Fundamentos" onClose={() => setIsMenuOpen(false)} isMobile>
+                <MenuItem href="/historia-do-cafe" onClose={() => setIsMenuOpen(false)} isMobile>
                   História do Café
-                </Link>
-                <Link
-                  href="/cafe-especial"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  O que é Café Especial
-                </Link>
-                <Link
-                  href="/variedades"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                </MenuItem>
+                <MenuItem href="/cafe-especial" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Café Especial
+                </MenuItem>
+                <MenuItem href="/variedades" onClose={() => setIsMenuOpen(false)} isMobile>
                   Variedades
-                </Link>
-                <Link
-                  href="/terroir"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                </MenuItem>
+                <MenuItem href="/terroir" onClose={() => setIsMenuOpen(false)} isMobile>
                   Terroir
-                </Link>
-                <Link
-                  href="/cafe-e-saude"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                </MenuItem>
+                <MenuItem href="/cafe-e-saude" onClose={() => setIsMenuOpen(false)} isMobile>
                   Café e Saúde
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Produção
-              </h3>
-              <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
-                <Link
-                  href="/colheita"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Colheita
-                </Link>
-                <Link
-                  href="/processamento"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Processamento
-                </Link>
-                <Link
-                  href="/torra"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Torra
-                </Link>
-                <Link
-                  href="/armazenamento"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Armazenamento
-                </Link>
-                <Link
-                  href="/agua-e-extracao"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Água e Extração
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Equipamentos
-              </h3>
-              <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
-                <Link
-                  href="/equipamentos/moedores"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Moedores
-                </Link>
-                <Link
-                  href="/equipamentos/cafeteiras"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Cafeteiras
-                </Link>
-                <Link
-                  href="/equipamentos/acessorios"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Acessórios
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                Métodos
-              </h3>
-              <div className="pl-3 md:pl-4 space-y-2 md:space-y-3">
-                <Link
-                  href="/metodos"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Espresso
-                </Link>
-                <Link
-                  href="/metodos/v60"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Hario V60
-                </Link>
-                <Link
-                  href="/metodos/aeropress"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AeroPress
-                </Link>
-                <Link
-                  href="/metodos/chemex"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Chemex
-                </Link>
-                <Link
-                  href="/metodos/french-press"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Prensa Francesa
-                </Link>
-                <Link
-                  href="/metodos/moka"
-                  className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Moka
-                </Link>
-              </div>
-              <Link
-                href="/guia-para-iniciantes"
-                className="block text-sm text-foreground/80 hover:text-foreground transition-colors pt-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                  Guia para Iniciantes
-                </h3>
-              </Link>
+                </MenuItem>
+              </MenuSection>
 
-              <Link
-                href="/sobre"
-                className="block text-sm text-foreground/80 hover:text-foreground transition-colors"
+              {/* Produção */}
+              <MenuSection title="Produção" onClose={() => setIsMenuOpen(false)} isMobile>
+                <MenuItem href="/colheita" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Colheita
+                </MenuItem>
+                <MenuItem href="/processamento" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Processamento
+                </MenuItem>
+                <MenuItem href="/torra" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Torra
+                </MenuItem>
+                <MenuItem href="/armazenamento" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Armazenamento
+                </MenuItem>
+                <MenuItem href="/agua-e-extracao" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Água e Extração
+                </MenuItem>
+              </MenuSection>
+              
+              {/* Métodos */}
+              <MenuSection title="Métodos" onClose={() => setIsMenuOpen(false)} isMobile>
+                <MenuItem href="/metodos/espresso" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Espresso
+                </MenuItem>
+                <MenuItem href="/metodos/v60" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Hario V60
+                </MenuItem>
+                <MenuItem href="/metodos/aeropress" onClose={() => setIsMenuOpen(false)} isMobile>
+                  AeroPress
+                </MenuItem>
+                <MenuItem href="/metodos/chemex" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Chemex
+                </MenuItem>
+                <MenuItem href="/metodos/french-press" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Prensa Francesa
+                </MenuItem>
+                <MenuItem href="/metodos/moka" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Moka
+                </MenuItem>
+              </MenuSection>
+
+              {/* Links Diretos */}
+              <div className="space-y-1 pt-2">
+                <MenuLink href="/latte-art" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Latte Art
+                </MenuLink>
+                <MenuLink href="/equipamentos" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Equipamentos
+                </MenuLink>
+                <MenuLink href="/degustacao" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Degustação
+                </MenuLink>
+                <MenuLink href="/guia-para-iniciantes" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Guia Iniciante
+                </MenuLink>
+                <MenuLink href="/sobre" onClose={() => setIsMenuOpen(false)} isMobile>
+                  Sobre
+                </MenuLink>
+              </div>
+            </nav>
+
+            <div className="mt-3 pt-3 border-t border-muted/30">
+              <Button
+                asChild
+                className="w-full bg-gradient-to-r from-coffee-700 to-coffee-800 hover:from-coffee-800 hover:to-coffee-900 dark:from-coffee-300 dark:to-coffee-200 dark:text-coffee-900 text-white border-0 rounded-full text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <h3 className="font-serif font-medium text-foreground mb-2 md:mb-3 text-sm md:text-base">
-                  Sobre
-                </h3>
-              </Link>
+                <Link href="/visite-cafeterias">Encontrar Cafeterias</Link>
+              </Button>
             </div>
-            <Button
-              asChild
-              className="w-full bg-gradient-to-r from-coffee-700 to-coffee-800 hover:from-coffee-800 hover:to-coffee-900 dark:from-coffee-300 dark:to-coffee-200 dark:text-coffee-900 text-white border-0 rounded-full text-sm"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Link href="/visite-cafeterias">Encontrar Cafeterias</Link>
-            </Button>
           </div>
         </div>
       )}
