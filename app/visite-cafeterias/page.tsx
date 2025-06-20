@@ -109,7 +109,7 @@ export default function VisiteCafeteriasPage() {
           {/* Influencers Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Influencers do Café</h2>
+              <h2 className="text-3xl font-bold text-[#884A39] dark:text-amber-300 mb-4">Influenciadores do Café</h2>
               <p className="text-[#884A39]/80 dark:text-amber-100/90 max-w-2xl mx-auto">
                 Siga estes criadores de conteúdo que compartilham as melhores experiências em cafeterias especiais pelo
                 Brasil e pelo mundo.
