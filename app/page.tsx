@@ -11,10 +11,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LottieAnimation from "@/components/LottieAnimation";
+import { Onboarding } from "@/components/onboarding";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Onboarding />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 xl:py-40">
         <div className="absolute inset-0 elegant-gradient" />
