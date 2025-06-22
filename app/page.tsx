@@ -70,15 +70,16 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-
-                <div className="relative animate-fade-in order-1 lg:order-2">
+              <div className="relative animate-fade-in order-1 lg:order-2">
                 <div className="absolute -inset-4 bg-gradient-to-r from-coffee-200 to-gold-200 dark:from-black dark:to-gray-950 blur-3xl opacity-30" />
-                <LottieAnimation
-                  animation="catcoffee"
-                  width="100%"
-                  height="100%"
-                />
+                <div className="hidden lg:block">
+                  <LottieAnimation
+                    animation="catcoffee"
+                    width="100%"
+                    height="100%"
+                  />
                 </div>
+              </div>
             </div>
           </div>
         </div>

@@ -91,7 +91,7 @@ export default function SobrePage() {
                   <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
                     <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">William and Sons</h5>
                     <p className="text-xs">
-                    Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Trabalha com cafés especiais, incluindo microlotes. Tem u   melhores pão de queijo que já experimentei.
+                    Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Tem um dos melhores pão de queijo que já experimentei.
                     </p>
                     <a 
                       href="https://instagram.com/williamsonscoffee" 
@@ -113,7 +113,7 @@ export default function SobrePage() {
                   <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
                     <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">Café ao Quadrado</h5>
                     <p className="text-xs">
-                    A primeira cafeteria do litoral gaúcho,localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
+                    A primeira cafeteria do litoral gaúcho, localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
                     </p>
                     <a 
                       href="https://instagram.com/cafeao2" 
