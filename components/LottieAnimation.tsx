@@ -5,7 +5,8 @@ const lottieMap: Record<string, string> = {
     "https://lottie.host/d43c238a-73af-410b-b63b-5fa17aa11354/TMr5GdCnQL.lottie",
   catcoffee:
     "https://lottie.host/2279a79d-4d4c-48cf-8a8e-d5e9f510e1fa/ks0Ja3vnL7.lottie",
-    pccafe: "https://lottie.host/3655fe11-899f-410d-8523-d6af0f16f7d1/VZlAexUbZB.lottie"
+  pccafe: "https://lottie.host/3655fe11-899f-410d-8523-d6af0f16f7d1/VZlAexUbZB.lottie",
+  coffee404: "https://lottie.host/45ca3b23-66eb-441f-a58a-d3cafca64fd7/0FohOpXbfh.lottie"
 };
 
 type Props = {
