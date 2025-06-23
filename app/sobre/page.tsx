@@ -5,12 +5,101 @@ import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 export default function SobrePage() {
+  const isMobile = useIsMobile()
+
+  const InfoIcon = () => (
+    <div className="animate-pulse-soft will-change-transform">
+      <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-pointer hover:scale-110 transition-transform" />
+    </div>
+  )
+
+  const CafeContent = ({ name, description, instagram }: { name: string, description: string, instagram: string }) => (
+    <div className="bg-white dark:bg-gray-800 p-6">
+      <p className="text-sm mb-4 text-[#884A39]/80 dark:text-[#F9E0BB]/90">
+        {description}
+      </p>
+      <a 
+        href={`https://instagram.com/${instagram}`}
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
+      >
+        <Instagram className="h-4 w-4" />
+        @{instagram}
+      </a>
+    </div>
+  )
+
+  const CafeInfo = ({ name, description, instagram }: { name: string, description: string, instagram: string }) => {
+    if (isMobile) {
+      return (
+        <Dialog>
+          <DialogTrigger>
+            <div className="animate-pulse-soft will-change-transform">
+              <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-pointer hover:scale-110 transition-transform" />
+            </div>
+          </DialogTrigger>
+          <DialogContent className="border-none shadow-lg bg-[#F9E0BB] dark:bg-gray-800">
+            <DialogHeader>
+              <DialogTitle className="text-lg font-medium text-[#884A39] dark:text-[#F9E0BB] mb-3">{name}</DialogTitle>
+            </DialogHeader>
+            <div className="text-sm mb-4 text-[#884A39] dark:text-[#F9E0BB]">
+              {description}
+            </div>
+            <a 
+              href={`https://instagram.com/${instagram}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
+            >
+              <Instagram className="h-4 w-4" />
+              @{instagram}
+            </a>
+          </DialogContent>
+        </Dialog>
+      )
+    }
+
+    return (
+      <HoverCard>
+        <HoverCardTrigger>
+          <div className="animate-pulse-soft will-change-transform">
+            <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-pointer hover:scale-110 transition-transform" />
+          </div>
+        </HoverCardTrigger>
+        <HoverCardContent className="w-80 border-none shadow-lg bg-[#F9E0BB] dark:bg-gray-800 backdrop-blur-lg">
+          <h5 className="text-lg font-medium text-[#884A39] dark:text-[#F9E0BB] mb-3">{name}</h5>
+          <div className="text-sm mb-4 text-[#884A39] dark:text-[#F9E0BB]">
+            {description}
+          </div>
+          <a 
+            href={`https://instagram.com/${instagram}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
+          >
+            <Instagram className="h-4 w-4" />
+            @{instagram}
+          </a>
+        </HoverCardContent>
+      </HoverCard>
+    )
+  }
+
   return (
     <div className="min-h-screen">
       <PageHeader
@@ -91,28 +180,11 @@ export default function SobrePage() {
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
                   <div className="flex items-center gap-2 pt-2">
                     <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">João - William and Sons</h4>
-                    <HoverCard>
-                      <HoverCardTrigger>
-                        <div className="animate-pulse-soft will-change-transform">
-                          <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-help hover:scale-110 transition-transform" />
-                        </div>
-                      </HoverCardTrigger>
-                      <HoverCardContent className="w-80 bg-white dark:bg-gray-800 p-4">
-                        <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2">William and Sons</h5>
-                        <p className="text-sm mb-3">
-                          Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Tem um dos melhores pão de queijo que já experimentei.
-                        </p>
-                        <a 
-                          href="https://instagram.com/williamsonscoffee" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
-                        >
-                          <Instagram className="h-4 w-4" />
-                          @williamsonscoffee
-                        </a>
-                      </HoverCardContent>
-                    </HoverCard>
+                    <CafeInfo 
+                      name="William and Sons"
+                      description="Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Tem um dos melhores pão de queijo que já experimentei."
+                      instagram="williamsonscoffee"
+                    />
                   </div>
                   <p className="text-sm mb-4">
                     Por me introduzir ao mundo do café especial, pela amizade e conversas sobre o café e a vida.
@@ -122,28 +194,11 @@ export default function SobrePage() {
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
                   <div className="flex items-center gap-2 pt-2">
                     <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">Cássio - Café ao Quadrado</h4>
-                    <HoverCard>
-                      <HoverCardTrigger>
-                        <div className="animate-pulse-soft will-change-transform">
-                          <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-help hover:scale-110 transition-transform" />
-                        </div>
-                      </HoverCardTrigger>
-                      <HoverCardContent className="w-80 bg-white dark:bg-gray-800 p-4">
-                        <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2">Café ao Quadrado</h5>
-                        <p className="text-sm mb-3">
-                          A primeira cafeteria do litoral gaúcho, localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
-                        </p>
-                        <a 
-                          href="https://instagram.com/cafeao2" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
-                        >
-                          <Instagram className="h-4 w-4" />
-                          @cafeao2
-                        </a>
-                      </HoverCardContent>
-                    </HoverCard>
+                    <CafeInfo 
+                      name="Café ao Quadrado"
+                      description="A primeira cafeteria do litoral gaúcho, localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades."
+                      instagram="cafeao2"
+                    />
                   </div>
                   <p className="text-sm mb-4">
                     Pelas incontáveis aulas sobre café especial, pela grande amizade, conversas, carinho e pela paixão contagiante sobre cafés!
