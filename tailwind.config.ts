@@ -104,12 +104,17 @@ const config = {
           from: { opacity: "0", transform: "translateX(-10px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "pulse-soft": {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-3px)' }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.3s ease-out",
+        "pulse-soft": "pulse-soft 1.5s ease-in-out infinite"
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

@@ -1,9 +1,14 @@
 "use client"
 import Image from "next/image"
-import { Heart, Mail, Instagram } from "lucide-react"
+import { Heart, Mail, Instagram, Info } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 export default function SobrePage() {
   return (
@@ -82,49 +87,74 @@ export default function SobrePage() {
                 Além de me ensinarem sobre café, me mostraram como a paixão pelo que fazemos pode transformar vidas.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
-                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">João - William and Sons</h4>
+                  <div className="flex items-center gap-2 pt-2">
+                    <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">João - William and Sons</h4>
+                    <HoverCard>
+                      <HoverCardTrigger>
+                        <div className="animate-pulse-soft will-change-transform">
+                          <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-help hover:scale-110 transition-transform" />
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent className="w-80 bg-white dark:bg-gray-800 p-4">
+                        <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2">William and Sons</h5>
+                        <p className="text-sm mb-3">
+                          Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Tem um dos melhores pão de queijo que já experimentei.
+                        </p>
+                        <a 
+                          href="https://instagram.com/williamsonscoffee" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
+                        >
+                          <Instagram className="h-4 w-4" />
+                          @williamsonscoffee
+                        </a>
+                      </HoverCardContent>
+                    </HoverCard>
+                  </div>
                   <p className="text-sm mb-4">
                     Por me introduzir ao mundo do café especial, pela amizade e conversas sobre o café e a vida.
                   </p>
-                  <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
-                    <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">William and Sons</h5>
-                    <p className="text-xs">
-                    Uma cafeteria e torrefação artesanal de Porto Alegre - RS. Tem um dos melhores pão de queijo que já experimentei.
-                    </p>
-                    <a 
-                      href="https://instagram.com/williamsonscoffee" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-[#884A39] dark:text-[#F9E0BB] mt-2 hover:underline"
-                    >
-                      <Instagram className="h-3 w-3" />
-                      @williamsonscoffee
-                    </a>
-                  </div>
                 </div>
 
                 <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
-                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">Cássio - Café ao Quadrado</h4>
+                  <div className="flex items-center gap-2 pt-2">
+                    <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">Cássio - Café ao Quadrado</h4>
+                    <HoverCard>
+                      <HoverCardTrigger>
+                        <div className="animate-pulse-soft will-change-transform">
+                          <Info className="h-5 w-5 mb-4 text-[#C38154] dark:text-[#F9E0BB] cursor-help hover:scale-110 transition-transform" />
+                        </div>
+                      </HoverCardTrigger>
+                      <HoverCardContent className="w-80 bg-white dark:bg-gray-800 p-4">
+                        <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2">Café ao Quadrado</h5>
+                        <p className="text-sm mb-3">
+                          A primeira cafeteria do litoral gaúcho, localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
+                        </p>
+                        <a 
+                          href="https://instagram.com/cafeao2" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-[#884A39] dark:text-[#F9E0BB] hover:underline"
+                        >
+                          <Instagram className="h-4 w-4" />
+                          @cafeao2
+                        </a>
+                      </HoverCardContent>
+                    </HoverCard>
+                  </div>
                   <p className="text-sm mb-4">
                     Pelas incontáveis aulas sobre café especial, pela grande amizade, conversas, carinho e pela paixão contagiante sobre cafés!
                   </p>
-                  <div className="bg-[#F9E0BB]/20 dark:bg-gray-600 p-4 rounded-lg">
-                    <h5 className="font-medium text-[#884A39] dark:text-[#F9E0BB] mb-2 text-sm">Café ao Quadrado</h5>
-                    <p className="text-xs">
-                    A primeira cafeteria do litoral gaúcho, localizada em Tramandaí - RS, a trabalhar com cafés especiais e métodos de preparos. O melhor lugar pra aprender sobre cafés especiais e criar amizades.
-                    </p>
-                    <a 
-                      href="https://instagram.com/cafeao2" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-[#884A39] dark:text-[#F9E0BB] mt-2 hover:underline"
-                    >
-                      <Instagram className="h-3 w-3" />
-                      @cafeao2
-                    </a>
-                  </div>
+                </div>
+
+                <div className="bg-[#F9E0BB]/30 dark:bg-gray-700 p-6 rounded-xl">
+                  <h4 className="font-bold text-[#884A39] dark:text-[#F9E0BB] mb-3">Diego</h4>
+                  <p className="text-sm mb-4">
+                    Por sempre me acompanhar nas aventuras pelas cafeterias, compartilhando momentos especiais e descobertas.
+                  </p>
                 </div>
               </div>
 
@@ -162,7 +192,7 @@ export default function SobrePage() {
               Tem alguma sugestão, correção ou apenas quer bater um papo sobre café? Ficarei feliz em ouvir de você!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button
+              <Button
                 asChild
                 variant="outline"
                 className="border-white text-black dark:text-white hover:bg-white/20 px-8 py-6 rounded-full"
