@@ -85,41 +85,34 @@ export default function Home() {
         </div>
       </section>
 
-    {/* Stats Section */}
-      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-coffee-900 via-coffee-800 to-coffee-900 dark:from-black dark:via-coffee-950 dark:to-black text-white">
+      {/* Stats Section */}
+      <section className="py-16 md:py-24 lg:py-22 bg-gradient-to-r from-coffee-900 via-coffee-800 to-coffee-900 dark:from-black dark:via-coffee-950 dark:to-black text-white">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
-            <div className="animate-fade-in">
-              <div className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 md:mb-4 text-gold-300">
-                50+
-              </div>
-              <div className="text-white/80 text-sm md:text-lg">
-                Métodos de Preparo
-              </div>
-            </div>
-            <div className="animate-fade-in">
-              <div className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 md:mb-4 text-gold-300">
-                100+
-              </div>
-              <div className="text-white/80 text-sm md:text-lg">
-                Variedades de Café
-              </div>
-            </div>
-            <div className="animate-fade-in">
-              <div className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 md:mb-4 text-gold-300">
-                25+
-              </div>
-              <div className="text-white/80 text-sm md:text-lg">
-                Países Produtores
-              </div>
-            </div>
-            <div className="animate-fade-in">
-              <div className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 md:mb-4 text-gold-300">
-                ∞
-              </div>
-              <div className="text-white/80 text-sm md:text-lg">
-                Possibilidades de Sabor
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gold-300 mb-4">
+              Apenas 1% é especial.
+            </h2>
+            <p className="text-base md:text-sm text-white/70 mb-8">
+              Dos cafés certificados no Brasil, só 1% atinge o padrão de qualidade para ser considerado especial
+            </p>
+
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed mb-12 font-serif">
+              Chegou a hora de você descobrir por que o café especial é considerado a melhor experiência em café
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <Link 
+                href="/cafe-especial" 
+                className="px-8 py-3 bg-gold-600 hover:bg-gold-500 text-coffee-950 rounded-full font-medium transition-colors"
+              >
+                O que é café especial?
+              </Link>
+              <Link 
+                href="/historia-do-cafe" 
+                className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-colors"
+              >
+                História do café
+              </Link>
             </div>
           </div>
         </div>
